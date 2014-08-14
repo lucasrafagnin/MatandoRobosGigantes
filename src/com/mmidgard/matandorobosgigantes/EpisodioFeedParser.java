@@ -14,17 +14,17 @@ import android.sax.StartElementListener;
 import android.util.Xml;
 import android.util.Xml.Encoding;
 
-public class EpisodeFeedParser extends BaseFeedParser {
+public class EpisodioFeedParser extends BaseFeedParser {
 
-	private Episode episode;
+	private Episodio episode;
 
-	protected EpisodeFeedParser(String feedUrl) {
+	protected EpisodioFeedParser(String feedUrl) {
 		super(feedUrl);
 	}
 
-	public List<Episode> parse() {
-		episode = new Episode();
-		final List<Episode> episodes = new ArrayList<Episode>();
+	public List<Episodio> parse() {
+		episode = new Episodio();
+		final List<Episodio> episodes = new ArrayList<Episodio>();
 
 		InputStream istream = getInputStream();
 
@@ -49,11 +49,20 @@ public class EpisodeFeedParser extends BaseFeedParser {
 			}
 		});
 
+		// TODO definir uma forma para buscar a descricao do podcast(episodio)
+		// item.getChild("itunes").setEndTextElementListener(new
+		// EndTextElementListener() {
+		// @Override
+		// public void end(String body) {
+		// episode.setDescription(body);
+		// }
+		// });
+
 		item.setEndElementListener(new EndElementListener() {
 			@Override
 			public void end() {
 				episodes.add(episode);
-				episode = new Episode();
+				episode = new Episodio();
 			}
 		});
 

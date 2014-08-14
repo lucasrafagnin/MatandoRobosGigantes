@@ -14,6 +14,22 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		new AsyncTask<Void, Void, Void>() {
+
+			@Override
+			protected Void doInBackground(Void... params) {
+				EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
+				List<Episodio> episodes = parser.parse();
+				for (Episodio episode : episodes) {
+					Log.i("episode", episode.getTitle() + "------" + episode.getDescription());
+				}
+				return null;
+			}
+		}.execute();
+
+	}
+
+	public void streaming() {
 		// TODO teste streaming: OK
 		// try {
 		// String url =
@@ -26,20 +42,6 @@ public class MainActivity extends Activity {
 		// } catch (Exception e) {
 		// e.printStackTrace();
 		// }
-
-		new AsyncTask<Void, Void, Void>() {
-
-			@Override
-			protected Void doInBackground(Void... params) {
-				EpisodeFeedParser parser = new EpisodeFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
-				List<Episode> episodes = parser.parse();
-				for (Episode episode : episodes) {
-					Log.i("episode", episode.getTitle() + "/n" + episode.getLink());
-				}
-				return null;
-			}
-		}.execute();
-
 	}
 
 }
