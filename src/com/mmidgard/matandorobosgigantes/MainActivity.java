@@ -1,15 +1,6 @@
 package com.mmidgard.matandorobosgigantes;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-
-import nl.matshofman.saxrssreader.RssFeed;
-import nl.matshofman.saxrssreader.RssItem;
-import nl.matshofman.saxrssreader.RssReader;
-
-import org.xml.sax.SAXException;
+import java.util.List;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -36,33 +27,14 @@ public class MainActivity extends Activity {
 		// e.printStackTrace();
 		// }
 
-		// new AsyncTask<Void, Void, Void>() {
-		// @Override
-		// protected Void doInBackground(Void... params) {
-		// new ReaderRSS().percorrerFeed();
-		// return null;
-		// }
-		// }.execute();
-
 		new AsyncTask<Void, Void, Void>() {
+
 			@Override
 			protected Void doInBackground(Void... params) {
-				try {
-					URL url = new URL("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
-					RssFeed feed = RssReader.read(url);
-
-					ArrayList<RssItem> rssItems = feed.getRssItems();
-					for (RssItem rssItem : rssItems) {
-						Log.i("RSS Reader", rssItem.getTitle());
-						Log.i("Link: ", rssItem.getLink());
-					}
-
-				} catch (MalformedURLException e) {
-					e.printStackTrace();
-				} catch (SAXException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
+				EpisodeFeedParser parser = new EpisodeFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
+				List<Episode> episodes = parser.parse();
+				for (Episode episode : episodes) {
+					Log.i("episode", episode.getTitle() + "/n" + episode.getLink());
 				}
 				return null;
 			}
