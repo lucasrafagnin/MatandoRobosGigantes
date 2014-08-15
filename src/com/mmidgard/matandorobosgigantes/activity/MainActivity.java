@@ -3,6 +3,7 @@ package com.mmidgard.matandorobosgigantes.activity;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class MainActivity extends Activity {
 	private Button podcast;
 	private Button vinhetas;
 	private Button show;
+	private ProgressDialog dialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,23 +34,48 @@ public class MainActivity extends Activity {
 		vinhetas = (Button)findViewById(R.id.menu_vinhetas);
 		show = (Button)findViewById(R.id.menu_mrgshow);
 
+		dialog = new ProgressDialog(this);
+
 		btnMenu();
 
-		new AsyncTask<Void, Void, List<Episodio>>() {
+		new AsyncTask<Void, Integer, Void>() {
+
+			private int valor = 0;
+			private EpisodioDAO epdao;
+
+			protected void onPreExecute() {
+				dialog.setIndeterminate(false);
+				dialog.setMax(400);
+				dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+				dialog.setCancelable(false);
+				dialog.setTitle("Aguarde...");
+				dialog.setMessage("Lendo feed do MRG");
+				dialog.show();
+				epdao = new EpisodioDAO(MainActivity.this);
+			};
 
 			@Override
-			protected List<Episodio> doInBackground(Void... params) {
+			protected Void doInBackground(Void... params) {
 				EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
-				return parser.parse();
-			}
-
-			protected void onPostExecute(List<Episodio> result) {
-				EpisodioDAO epdao = new EpisodioDAO(MainActivity.this);
-				for (Episodio episodio : result) {
+				List<Episodio> list = parser.parse();
+				dialog.setMax(list.size());
+				for (Episodio episodio : list) {
 					if (epdao.getById(episodio.getId()) == null)
 						epdao.insert(episodio);
+					valor++;
+					onProgressUpdate(valor);
 				}
+				return null;
+			}
+
+			protected void onPostExecute(Void v) {
+				dialog.dismiss();
 			};
+
+			protected void onProgressUpdate(Integer... progress) {
+				dialog.setProgress(progress[0]);
+			}
+
 		}.execute();
 
 	}

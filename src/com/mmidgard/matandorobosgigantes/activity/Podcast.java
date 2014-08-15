@@ -27,7 +27,11 @@ public class Podcast extends Activity implements OnItemClickListener {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.podcast);
+	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
 		EpisodioDAO epdao = new EpisodioDAO(Podcast.this);
 		episodios = epdao.getAll();
 
