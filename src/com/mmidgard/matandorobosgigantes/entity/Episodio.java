@@ -17,6 +17,8 @@ public class Episodio implements Serializable {
 	private String link;
 	@DatabaseField
 	private String description;
+	@DatabaseField
+	private boolean baixado;
 
 	public Episodio() {
 	}
@@ -51,6 +53,14 @@ public class Episodio implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public boolean isBaixado() {
+		return baixado;
+	}
+
+	public void setBaixado(boolean baixado) {
+		this.baixado = baixado;
 	}
 
 }
