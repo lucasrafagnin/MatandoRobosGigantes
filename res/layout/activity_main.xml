@@ -61,6 +61,7 @@
         android:orientation="horizontal" >
 
         <ImageButton
+            android:id="@+id/beto"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -69,6 +70,7 @@
             android:textStyle="bold" />
 
         <ImageButton
+            android:id="@+id/affonso"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -77,6 +79,7 @@
             android:textStyle="bold" />
 
         <ImageButton
+            android:id="@+id/diogo"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
