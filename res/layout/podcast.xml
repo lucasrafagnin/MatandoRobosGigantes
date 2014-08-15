@@ -4,10 +4,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="Todos"
+            android:textColor="#A32D3D"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#A32D3D"
+            android:text="Baixados"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <ListView
         android:id="@+id/list_podcast"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:background="#fff"
         android:divider="#F4690A"
         android:dividerHeight="2dp" />
 

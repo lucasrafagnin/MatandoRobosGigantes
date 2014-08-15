@@ -4,15 +4,15 @@
     android:layout_height="match_parent"
     android:background="#A32D3D"
     android:orientation="vertical" >
-    
-    <TextView 
-        android:text="MRG"
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textColor="#F4690A"
         android:layout_gravity="center"
-        android:textStyle="bold"/>
+        android:text="MRG"
+        android:textColor="#F4690A"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -22,6 +22,7 @@
         android:orientation="vertical" >
 
         <Button
+            android:id="@+id/menu_ouvir"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -32,6 +33,7 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/menu_vinhetas"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -42,6 +44,7 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/menu_mrgshow"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -81,14 +84,14 @@
             android:textColor="#F4690A"
             android:textStyle="bold" />
     </LinearLayout>
-    
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="www.matandorobosgigantes.com.br" 
-        android:textColor="#F4690A"
         android:background="#fff"
-        android:textSize="15sp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="www.matandorobosgigantes.com.br"
+        android:textColor="#F4690A"
+        android:textSize="15sp" />
 
 </LinearLayout>

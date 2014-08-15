@@ -2,19 +2,14 @@ package com.mmidgard.matandorobosgigantes;
 
 import java.util.List;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
 public class AdapterListPodcast<T extends Episodio> extends BaseAdapter {
 
