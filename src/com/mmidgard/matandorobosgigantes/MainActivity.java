@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -13,27 +14,28 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Intent i = new Intent(MainActivity.this, Podcast.class);
-		startActivity(i);
 
-//		new AsyncTask<Void, Void, List<Episodio>>() {
-//
-//			@Override
-//			protected List<Episodio> doInBackground(Void... params) {
-//				EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
-//				return parser.parse();
-//			}
-//
-//			protected void onPostExecute(List<Episodio> result) {
-//				EpisodioDAO epdao = new EpisodioDAO(MainActivity.this);
-//				for (Episodio episodio : result) {
-//					epdao.insert(episodio);
-//				}
-//				
-//				Intent i = new Intent(MainActivity.this, Podcast.class);
-//				startActivity(i);
-//			};
-//		}.execute();
+		Toast.makeText(MainActivity.this, "Baixando episodios...", Toast.LENGTH_LONG).show();
+
+		new AsyncTask<Void, Void, List<Episodio>>() {
+
+			@Override
+			protected List<Episodio> doInBackground(Void... params) {
+				EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
+				return parser.parse();
+			}
+
+			protected void onPostExecute(List<Episodio> result) {
+				EpisodioDAO epdao = new EpisodioDAO(MainActivity.this);
+				for (Episodio episodio : result) {
+					if (epdao.getById(episodio.getId()) == null)
+						epdao.insert(episodio);
+				}
+
+				Intent i = new Intent(MainActivity.this, Podcast.class);
+				startActivity(i);
+			};
+		}.execute();
 
 	}
 

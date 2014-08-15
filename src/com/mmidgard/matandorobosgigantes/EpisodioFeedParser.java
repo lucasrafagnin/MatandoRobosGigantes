@@ -11,6 +11,7 @@ import android.sax.EndElementListener;
 import android.sax.EndTextElementListener;
 import android.sax.RootElement;
 import android.sax.StartElementListener;
+import android.util.Log;
 import android.util.Xml;
 import android.util.Xml.Encoding;
 
@@ -49,14 +50,14 @@ public class EpisodioFeedParser extends BaseFeedParser {
 			}
 		});
 
-		// TODO definir uma forma para buscar a descricao do podcast(episodio)
-		// item.getChild("itunes").setEndTextElementListener(new
-		// EndTextElementListener() {
-		// @Override
-		// public void end(String body) {
-		// episode.setDescription(body);
-		// }
-		// });
+		item.getChild("http://purl.org/rss/1.0/modules/content/", "encoded").setEndTextElementListener(new EndTextElementListener() {
+			@Override
+			public void end(String body) {
+				// Log.i("AKI", body);
+				// nao sera usado no momento, pois a maioria dos episodios nao
+				// tem as imgs, e os que tem o link nao funciona mais
+			}
+		});
 
 		item.setEndElementListener(new EndElementListener() {
 			@Override
