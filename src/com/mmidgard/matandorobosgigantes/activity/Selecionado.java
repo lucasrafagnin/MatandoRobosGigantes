@@ -5,13 +5,16 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.mmidgard.matandorobosgigantes.R;
+import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
 public class Selecionado extends Activity {
@@ -24,8 +27,12 @@ public class Selecionado extends Activity {
 	private ImageButton download;
 	private ImageButton favourite;
 	private ImageButton pause;
+	private SeekBar progresso;
 	private MediaPlayer mediaPlayer;
 	private boolean ouvindo = false;
+	private EpisodioDAO epDao;
+	
+	private Handler seekHandler = new Handler();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,7 @@ public class Selecionado extends Activity {
 	}
 
 	private void setarInformacoes() {
+		progresso = (SeekBar)findViewById(R.id.barraProgresso);
 		titulo = (TextView)findViewById(R.id.selecionado_titulo);
 		descricao = (TextView)findViewById(R.id.selecionado_descricao);
 		play = (ImageButton)findViewById(R.id.btnPlay);
@@ -50,13 +58,37 @@ public class Selecionado extends Activity {
 		favourite = (ImageButton)findViewById(R.id.btnFavorite);
 		pause = (ImageButton)findViewById(R.id.btnPause);
 
+		if (episodio.isFavorito())
+			favourite.setBackgroundResource(R.drawable.favourite_pressed);
+		else
+			favourite.setBackgroundResource(R.drawable.favourite);
+
 		titulo.setText(episodio.getTitle());
 		descricao.setText(episodio.getDescription());
 
 		mediaPlayer = new MediaPlayer();
 		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
+		epDao = new EpisodioDAO(Selecionado.this);
+
 		clicks();
+
+		streaming(episodio.getLink());
+		progresso.setMax(mediaPlayer.getDuration());
+		
+		seekUpdation();
+	}
+
+	Runnable run = new Runnable() {
+		@Override
+		public void run() {
+			seekUpdation();
+		}
+	};
+
+	public void seekUpdation() {
+		progresso.setProgress(mediaPlayer.getCurrentPosition());
+		seekHandler.postDelayed(run, 1000);
 	}
 
 	private void clicks() {
@@ -64,13 +96,7 @@ public class Selecionado extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				if (ouvindo)
-					mediaPlayer.start();
-				else {
-					streaming(episodio.getLink());
-					ouvindo = true;
-				}
-
+				mediaPlayer.start();
 				play.setVisibility(View.GONE);
 				pause.setVisibility(View.VISIBLE);
 			}
@@ -80,22 +106,57 @@ public class Selecionado extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				if (ouvindo) {
-					mediaPlayer.pause();
-				}
+				mediaPlayer.pause();
 				play.setVisibility(View.VISIBLE);
 				pause.setVisibility(View.GONE);
 			}
 		});
+
+		favourite.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (episodio.isFavorito()) {
+					episodio.setFavorito(false);
+					favourite.setBackgroundResource(R.drawable.favourite);
+				} else {
+					episodio.setFavorito(true);
+					favourite.setBackgroundResource(R.drawable.favourite_pressed);
+				}
+				epDao.update(episodio);
+			}
+		});
+
+		// progresso.setOnSeekBarChangeListener(new
+		// SeekBar.OnSeekBarChangeListener() {
+		//
+		// @Override
+		// public void onStopTrackingTouch(SeekBar seekBar) {
+		//
+		// }
+		//
+		// @Override
+		// public void onStartTrackingTouch(SeekBar seekBar) {
+		//
+		// }
+		//
+		// @Override
+		// public void onProgressChanged(SeekBar seekBar, int progress, boolean
+		// fromUser) {
+		// if (mediaPlayer != null && fromUser) {
+		// mediaPlayer.seekTo(progress * 1000);
+		// }
+		// }
+		// });
 	}
 
 	public void streaming(String url) {
 		try {
 			mediaPlayer.setDataSource(url);
 			mediaPlayer.prepare();
-			mediaPlayer.start();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+
 }
