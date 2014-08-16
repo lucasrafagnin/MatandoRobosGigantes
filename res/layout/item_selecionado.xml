@@ -47,11 +47,6 @@
                 android:textColor="#fff"
                 android:textSize="14sp" />
         </ScrollView>
-        
-        <Button 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Baixar"/>
 
         <SeekBar
             android:id="@+id/songProgressBar"
@@ -84,9 +79,18 @@
             android:paddingRight="10dp" >
 
             <ImageButton
+                android:id="@+id/btnDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:background="@null"
+                android:src="@drawable/btn_download" />
+
+            <ImageButton
                 android:id="@+id/btnPrevious"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
                 android:background="@null"
                 android:src="@drawable/btn_previous" />
 
@@ -101,8 +105,17 @@
                 android:id="@+id/btnNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
                 android:background="@null"
                 android:src="@drawable/btn_next" />
+
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@null"
+                android:src="@drawable/btn_favourite" />
         </LinearLayout>
     </LinearLayout>
 

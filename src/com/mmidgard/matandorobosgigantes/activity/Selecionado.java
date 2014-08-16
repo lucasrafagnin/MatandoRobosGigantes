@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.mmidgard.matandorobosgigantes.R;
@@ -13,6 +14,9 @@ public class Selecionado extends Activity {
 	private Episodio episodio;
 	private TextView titulo;
 	private TextView descricao;
+	private ImageButton play;
+	private ImageButton next;
+	private ImageButton previous;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class Selecionado extends Activity {
 	private void setarInformacoes() {
 		titulo = (TextView)findViewById(R.id.selecionado_titulo);
 		descricao = (TextView)findViewById(R.id.selecionado_descricao);
+		play = (ImageButton)findViewById(R.id.btnPlay);
+		next = (ImageButton)findViewById(R.id.btnNext);
+		previous = (ImageButton)findViewById(R.id.btnPrevious);
 
 		titulo.setText(episodio.getTitle());
 		descricao.setText(episodio.getDescription());
