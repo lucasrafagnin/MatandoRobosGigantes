@@ -164,19 +164,4 @@ public class MainActivity extends Activity {
 		});
 	}
 
-	public void streaming() {
-		// TODO teste streaming: OK
-		// try {
-		// String url =
-		// "http://jovemnerd.com.br/podpress_trac/web/100144/0/MRG230_Transformers4.mp3";
-		// MediaPlayer mediaPlayer = new MediaPlayer();
-		// mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-		// mediaPlayer.setDataSource(url);
-		// mediaPlayer.prepare();
-		// mediaPlayer.start();
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// }
-	}
-
 }
