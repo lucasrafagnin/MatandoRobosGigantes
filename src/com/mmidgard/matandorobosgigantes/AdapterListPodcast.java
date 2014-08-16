@@ -25,7 +25,10 @@ public class AdapterListPodcast<T extends Episodio> extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		return listaEpisodios.size();
+		if (listaEpisodios != null)
+			return listaEpisodios.size();
+		else
+			return 0;
 	}
 
 	@Override

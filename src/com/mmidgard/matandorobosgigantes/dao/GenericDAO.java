@@ -82,7 +82,7 @@ public abstract class GenericDAO<E> extends BDControle<E> {
 		}
 	}
 
-	public List<E> getValor(String valor, String campo) {
+	public List<E> getValor(Object valor, String campo) {
 		List<E> lista = new ArrayList<E>();
 		try {
 			QueryBuilder<E, Integer> queryBuilder = dao.queryBuilder();
