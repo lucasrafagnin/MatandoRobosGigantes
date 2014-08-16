@@ -11,7 +11,7 @@ public class Episodio implements Serializable {
 	private static final long serialVersionUID = -5323205640988715688L;
 	@DatabaseField(generatedId = true)
 	private int id;
-	@DatabaseField
+	@DatabaseField(columnName="title")
 	private String title;
 	@DatabaseField
 	private String link;
@@ -31,7 +31,7 @@ public class Episodio implements Serializable {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(int id) { 
 		this.id = id;
 	}
 

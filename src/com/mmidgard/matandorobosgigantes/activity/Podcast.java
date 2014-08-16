@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
@@ -36,6 +37,8 @@ public class Podcast extends Activity implements OnItemClickListener {
 		episodios = epdao.getAll();
 
 		updateList(episodios);
+		
+		Toast.makeText(Podcast.this, "Total de episodios: " + episodios.size(), Toast.LENGTH_SHORT).show();
 	}
 
 	private void updateList(List<Episodio> users) {

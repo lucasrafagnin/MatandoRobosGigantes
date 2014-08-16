@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
 	private ImageButton beto;
 	private ImageButton diogo;
 	private ImageButton affonso;
+	private EpisodioDAO epdao;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +48,11 @@ public class MainActivity extends Activity {
 
 		btnMenu();
 
+		epdao = new EpisodioDAO(MainActivity.this);
+
 		new AsyncTask<Void, Integer, Void>() {
 
 			private int valor = 0;
-			private EpisodioDAO epdao;
 
 			protected void onPreExecute() {
 				dialog.setIndeterminate(false);
@@ -60,7 +62,6 @@ public class MainActivity extends Activity {
 				dialog.setTitle("Aguarde...");
 				dialog.setMessage("Lendo feed do MRG");
 				dialog.show();
-				epdao = new EpisodioDAO(MainActivity.this);
 			};
 
 			@Override
@@ -69,7 +70,7 @@ public class MainActivity extends Activity {
 				List<Episodio> list = parser.parse();
 				dialog.setMax(list.size());
 				for (Episodio episodio : list) {
-					if (epdao.getById(episodio.getId()) == null)
+					if (epdao.getValor(episodio.getTitle(), "title") == null)
 						epdao.insert(episodio);
 					valor++;
 					onProgressUpdate(valor);

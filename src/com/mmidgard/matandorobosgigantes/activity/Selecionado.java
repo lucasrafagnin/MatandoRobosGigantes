@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -27,6 +28,7 @@ public class Selecionado extends Activity {
 	private ImageButton download;
 	private ImageButton favourite;
 	private ImageButton pause;
+	private ImageButton abrirBrowser;
 	private SeekBar progresso;
 	private MediaPlayer mediaPlayer;
 	private boolean ouvindo = false;
@@ -57,6 +59,7 @@ public class Selecionado extends Activity {
 		download = (ImageButton)findViewById(R.id.btnDownload);
 		favourite = (ImageButton)findViewById(R.id.btnFavorite);
 		pause = (ImageButton)findViewById(R.id.btnPause);
+		abrirBrowser = (ImageButton)findViewById(R.id.abrir_browser);
 
 		if (episodio.isFavorito())
 			favourite.setBackgroundResource(R.drawable.favourite_pressed);
@@ -127,27 +130,14 @@ public class Selecionado extends Activity {
 			}
 		});
 
-		// progresso.setOnSeekBarChangeListener(new
-		// SeekBar.OnSeekBarChangeListener() {
-		//
-		// @Override
-		// public void onStopTrackingTouch(SeekBar seekBar) {
-		//
-		// }
-		//
-		// @Override
-		// public void onStartTrackingTouch(SeekBar seekBar) {
-		//
-		// }
-		//
-		// @Override
-		// public void onProgressChanged(SeekBar seekBar, int progress, boolean
-		// fromUser) {
-		// if (mediaPlayer != null && fromUser) {
-		// mediaPlayer.seekTo(progress * 1000);
-		// }
-		// }
-		// });
+		abrirBrowser.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(episodio.getLinkSite()));
+				startActivity(browserIntent);
+			}
+		});
 	}
 
 	public void streaming(String url) {

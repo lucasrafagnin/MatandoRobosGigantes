@@ -88,11 +88,14 @@ public abstract class GenericDAO<E> extends BDControle<E> {
 			QueryBuilder<E, Integer> queryBuilder = dao.queryBuilder();
 			queryBuilder.where().eq(campo, valor);
 			lista = dao.query(queryBuilder.prepare());
-			return lista;
+			if (lista.size() == 0)
+				return null;
+			else
+				return lista;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return null;
 		}
+		return null;
 	}
 
 }
