@@ -50,6 +50,13 @@ public class EpisodioFeedParser extends BaseFeedParser {
 				episode.setTitle(body);
 			}
 		});
+		
+		item.getChild("link").setEndTextElementListener(new EndTextElementListener() {
+			@Override
+			public void end(String body) {
+				episode.setLinkSite(body);
+			}
+		});
 
 		item.getChild("http://purl.org/rss/1.0/modules/content/", "encoded").setEndTextElementListener(new EndTextElementListener() {
 			@Override

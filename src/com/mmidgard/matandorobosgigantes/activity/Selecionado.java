@@ -31,7 +31,7 @@ public class Selecionado extends Activity {
 	private MediaPlayer mediaPlayer;
 	private boolean ouvindo = false;
 	private EpisodioDAO epDao;
-	
+
 	private Handler seekHandler = new Handler();
 
 	@Override
@@ -75,7 +75,7 @@ public class Selecionado extends Activity {
 
 		streaming(episodio.getLink());
 		progresso.setMax(mediaPlayer.getDuration());
-		
+
 		seekUpdation();
 	}
 

@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
 				dialog.setProgress(progress[0]);
 			}
 
-		};
+		}.execute();
 
 	}
 

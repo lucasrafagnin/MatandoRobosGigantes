@@ -21,6 +21,8 @@ public class Episodio implements Serializable {
 	private boolean baixado;
 	@DatabaseField
 	private boolean favorito;
+	@DatabaseField
+	private String linkSite;
 
 	public Episodio() {
 	}
@@ -71,6 +73,14 @@ public class Episodio implements Serializable {
 
 	public void setFavorito(boolean favorito) {
 		this.favorito = favorito;
+	}
+
+	public String getLinkSite() {
+		return linkSite;
+	}
+
+	public void setLinkSite(String linkSite) {
+		this.linkSite = linkSite;
 	}
 
 }
