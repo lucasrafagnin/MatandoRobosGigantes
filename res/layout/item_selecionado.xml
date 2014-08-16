@@ -10,11 +10,11 @@
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:background="#3E3E3C"
+        android:gravity="center_vertical"
         android:paddingLeft="15dp"
         android:paddingRight="5dp"
         android:textColor="#fff"
         android:textSize="16sp"
-        android:gravity="center_vertical"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -30,15 +30,15 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/mrg_banner"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/mrg_banner" />
 
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:scrollbarFadeDuration="0" 
-            android:padding="5dp">
+            android:padding="5dp"
+            android:scrollbarFadeDuration="0" >
 
             <TextView
                 android:id="@+id/selecionado_descricao"
@@ -47,12 +47,17 @@
                 android:textColor="#fff"
                 android:textSize="14sp" />
         </ScrollView>
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baixar"/>
 
         <SeekBar
             android:id="@+id/songProgressBar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
@@ -66,8 +71,8 @@
         android:layout_height="wrap_content"
         android:background="#3E3E3C"
         android:gravity="center"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -86,25 +91,11 @@
                 android:src="@drawable/btn_previous" />
 
             <ImageButton
-                android:id="@+id/btnBackward"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/btn_backward" />
-
-            <ImageButton
                 android:id="@+id/btnPlay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:src="@drawable/btn_play" />
-
-            <ImageButton
-                android:id="@+id/btnForward"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:src="@drawable/btn_forward" />
 
             <ImageButton
                 android:id="@+id/btnNext"
