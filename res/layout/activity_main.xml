@@ -23,35 +23,38 @@
 
         <Button
             android:id="@+id/menu_ouvir"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:background="#fff"
+            android:drawableLeft="@drawable/podcast_icon"
             android:padding="10dp"
             android:text="Ouvir podcast"
-            android:textColor="#F4690A"
+            android:textColor="#A32D3D"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/menu_vinhetas"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:background="#fff"
+            android:drawableLeft="@drawable/entradas_icon"
             android:padding="10dp"
             android:text="Entradas e vinhetas"
-            android:textColor="#F4690A"
+            android:textColor="#A32D3D"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/menu_mrgshow"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:background="#fff"
+            android:drawableLeft="@drawable/mrgshow_icon"
             android:padding="10dp"
             android:text="Assistir MRG Show"
-            android:textColor="#F4690A"
+            android:textColor="#A32D3D"
             android:textStyle="bold" />
     </LinearLayout>
 

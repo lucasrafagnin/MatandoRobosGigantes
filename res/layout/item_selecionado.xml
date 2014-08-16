@@ -99,6 +99,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:src="@drawable/btn_play" />
 
             <ImageButton

@@ -29,6 +29,16 @@
             android:text="Baixados"
             android:textColor="#fff"
             android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#A32D3D"
+            android:text="Favoritos"
+            android:textColor="#fff"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ListView

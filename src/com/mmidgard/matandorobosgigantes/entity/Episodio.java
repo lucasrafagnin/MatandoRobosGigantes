@@ -19,6 +19,8 @@ public class Episodio implements Serializable {
 	private String description;
 	@DatabaseField
 	private boolean baixado;
+	@DatabaseField
+	private boolean favorito;
 
 	public Episodio() {
 	}
@@ -61,6 +63,14 @@ public class Episodio implements Serializable {
 
 	public void setBaixado(boolean baixado) {
 		this.baixado = baixado;
+	}
+
+	public boolean isFavorito() {
+		return favorito;
+	}
+
+	public void setFavorito(boolean favorito) {
+		this.favorito = favorito;
 	}
 
 }

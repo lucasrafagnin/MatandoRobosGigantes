@@ -17,6 +17,8 @@ public class Selecionado extends Activity {
 	private ImageButton play;
 	private ImageButton next;
 	private ImageButton previous;
+	private ImageButton download;
+	private ImageButton favourite;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class Selecionado extends Activity {
 		play = (ImageButton)findViewById(R.id.btnPlay);
 		next = (ImageButton)findViewById(R.id.btnNext);
 		previous = (ImageButton)findViewById(R.id.btnPrevious);
+		download = (ImageButton)findViewById(R.id.btnDownload);
+		favourite = (ImageButton)findViewById(R.id.btnFavorite);
 
 		titulo.setText(episodio.getTitle());
 		descricao.setText(episodio.getDescription());
