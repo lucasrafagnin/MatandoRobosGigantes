@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,6 +19,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.AdapterListPodcast;
+import com.mmidgard.matandorobosgigantes.EpisodioFeedParser;
 import com.mmidgard.matandorobosgigantes.R;
 import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
@@ -28,10 +31,14 @@ public class Podcast extends Activity implements OnItemClickListener {
 	private List<Episodio> episodios;
 	private List<Episodio> baixados = new ArrayList<Episodio>();
 	private List<Episodio> favoritos = new ArrayList<Episodio>();
+	private EpisodioDAO epdao;
 
 	private Button btnTodos;
 	private Button btnBaixados;
 	private Button btnFavoritos;
+	private Button baixarPod;
+
+	private ProgressDialog dialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +50,64 @@ public class Podcast extends Activity implements OnItemClickListener {
 		btnBaixados = (Button)findViewById(R.id.menu_baixados);
 		btnFavoritos = (Button)findViewById(R.id.menu_favoritos);
 		listPodcast = (ListView)findViewById(R.id.list_podcast);
+		baixarPod = (Button)findViewById(R.id.baixarpod);
 
-		EpisodioDAO epdao = new EpisodioDAO(Podcast.this);
+		epdao = new EpisodioDAO(Podcast.this);
 		episodios = epdao.getAll();
+		dialog = new ProgressDialog(this);
 
 		updateList(episodios);
 
 		clicks();
+	}
+
+	public void baixarPodcast() {
+		new AsyncTask<Void, Integer, Void>() {
+
+			private int valor = 0;
+
+			protected void onPreExecute() {
+				dialog.setIndeterminate(false);
+				dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+				dialog.setCancelable(false);
+				dialog.setTitle("Aguarde...");
+				dialog.setMessage("Lendo feed do MRG");
+				dialog.show();
+			};
+
+			@Override
+			protected Void doInBackground(Void... params) {
+				EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
+				List<Episodio> list = parser.parse();
+				dialog.setMax(list.size());
+				for (Episodio episodio : list) {
+					if (epdao.getValor(episodio.getTitle(), "title") == null)
+						epdao.insert(episodio);
+					valor++;
+					onProgressUpdate(valor);
+				}
+				return null;
+			}
+
+			protected void onPostExecute(Void v) {
+				updateList(epdao.getAll());
+				dialog.dismiss();
+
+				btnTodos.setBackgroundColor(Color.parseColor("#ffffff"));
+				btnTodos.setTextColor(Color.parseColor("#A32D3D"));
+
+				btnBaixados.setBackgroundColor(Color.parseColor("#A32D3D"));
+				btnBaixados.setTextColor(Color.parseColor("#ffffff"));
+				btnFavoritos.setBackgroundColor(Color.parseColor("#A32D3D"));
+				btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
+			};
+
+			protected void onProgressUpdate(Integer... progress) {
+				dialog.setProgress(progress[0]);
+			}
+
+		}.execute();
+
 	}
 
 	private void clicks() {
@@ -104,6 +162,13 @@ public class Podcast extends Activity implements OnItemClickListener {
 			}
 		});
 
+		baixarPod.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				baixarPodcast();
+			}
+		});
 	}
 
 	private void updateList(List<Episodio> menuselecionado) {

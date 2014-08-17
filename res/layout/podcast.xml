@@ -47,9 +47,20 @@
     <ListView
         android:id="@+id/list_podcast"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="#fff"
         android:divider="#F4690A"
         android:dividerHeight="2dp" />
+
+    <Button
+        android:id="@+id/baixarpod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#A32D3D"
+        android:text="Verificar atualizações"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
 </LinearLayout>

@@ -1,24 +1,37 @@
 package com.mmidgard.matandorobosgigantes.activity;
 
+import java.io.BufferedInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
+
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.R;
 import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
 public class Selecionado extends Activity {
+	private static final String LOG_TAG = "LOG";
 	private Episodio episodio;
 	private TextView titulo;
 	private TextView descricao;
@@ -31,10 +44,10 @@ public class Selecionado extends Activity {
 	private ImageButton abrirBrowser;
 	private SeekBar progresso;
 	private MediaPlayer mediaPlayer;
-	private boolean ouvindo = false;
 	private EpisodioDAO epDao;
 
 	private Handler seekHandler = new Handler();
+	private ProgressDialog dialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +58,7 @@ public class Selecionado extends Activity {
 		Intent i = getIntent();
 		Bundle b = i.getExtras();
 		episodio = (Episodio)b.get("episodio");
+		dialog = new ProgressDialog(this);
 
 		setarInformacoes();
 	}
@@ -125,6 +139,7 @@ public class Selecionado extends Activity {
 				} else {
 					episodio.setFavorito(true);
 					favourite.setBackgroundResource(R.drawable.favourite_pressed);
+					Toast.makeText(Selecionado.this, "Episódio adicionado aos favoritos!", Toast.LENGTH_LONG).show();
 				}
 				epDao.update(episodio);
 			}
@@ -138,6 +153,14 @@ public class Selecionado extends Activity {
 				startActivity(browserIntent);
 			}
 		});
+
+		download.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				baixarEpisodio(episodio.getLink());
+			}
+		});
 	}
 
 	public void streaming(String url) {
@@ -149,4 +172,55 @@ public class Selecionado extends Activity {
 		}
 	}
 
+	public void baixarEpisodio(final String link) {
+		new AsyncTask<Void, String, Void>() {
+
+			@Override
+			protected void onPreExecute() {
+				dialog.setIndeterminate(false);
+				dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+				dialog.setCancelable(false);
+				dialog.setTitle("Aguarde...");
+				dialog.setMessage("Baixando o episódio");
+				dialog.show();
+			}
+
+			@Override
+			protected Void doInBackground(Void... params) {
+				int count;
+				try {
+					URL url = new URL(link);
+					URLConnection conexion = url.openConnection();
+					conexion.connect();
+					int lenghtOfFile = conexion.getContentLength();
+					Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
+					InputStream input = new BufferedInputStream(url.openStream());
+					OutputStream output = new FileOutputStream(Environment.getExternalStorageDirectory() + "/mrg/");
+					byte data[] = new byte[1024];
+					long total = 0;
+					while ((count = input.read(data)) != -1) {
+						total += count;
+						publishProgress("" + (int)((total * 100) / lenghtOfFile));
+						output.write(data, 0, count);
+					}
+
+					output.flush();
+					output.close();
+					input.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				return null;
+			}
+
+			protected void onProgressUpdate(String... progress) {
+				dialog.setProgress(Integer.parseInt(progress[0]));
+			}
+
+			protected void onPostExecute(Void result) {
+				dialog.dismiss();
+			};
+
+		}.execute();
+	}
 }
