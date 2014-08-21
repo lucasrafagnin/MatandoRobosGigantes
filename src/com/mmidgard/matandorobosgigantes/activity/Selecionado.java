@@ -15,9 +15,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -158,7 +156,7 @@ public class Selecionado extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				baixarEpisodio(episodio.getLink());
+				baixarEpisodio(episodio.getLink(), episodio.getTitle().replaceAll(" ", "_"));
 			}
 		});
 	}
@@ -172,8 +170,8 @@ public class Selecionado extends Activity {
 		}
 	}
 
-	public void baixarEpisodio(final String link) {
-		new AsyncTask<Void, String, Void>() {
+	public void baixarEpisodio(final String link, final String nome) {
+		new AsyncTask<Void, Integer, Void>() {
 
 			@Override
 			protected void onPreExecute() {
@@ -193,14 +191,17 @@ public class Selecionado extends Activity {
 					URLConnection conexion = url.openConnection();
 					conexion.connect();
 					int lenghtOfFile = conexion.getContentLength();
-					Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
+
 					InputStream input = new BufferedInputStream(url.openStream());
-					OutputStream output = new FileOutputStream(Environment.getExternalStorageDirectory() + "/mrg/");
+					OutputStream output = new FileOutputStream(android.os.Environment.getExternalStorageDirectory() + "/" + nome + ".mp3");
+
 					byte data[] = new byte[1024];
+
 					long total = 0;
+
 					while ((count = input.read(data)) != -1) {
 						total += count;
-						publishProgress("" + (int)((total * 100) / lenghtOfFile));
+						publishProgress((int)(total * 100 / lenghtOfFile));
 						output.write(data, 0, count);
 					}
 
@@ -213,8 +214,8 @@ public class Selecionado extends Activity {
 				return null;
 			}
 
-			protected void onProgressUpdate(String... progress) {
-				dialog.setProgress(Integer.parseInt(progress[0]));
+			protected void onProgressUpdate(Integer... progress) {
+				dialog.setProgress(progress[0]);
 			}
 
 			protected void onPostExecute(Void result) {
@@ -223,4 +224,5 @@ public class Selecionado extends Activity {
 
 		}.execute();
 	}
+
 }
