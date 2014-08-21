@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
@@ -47,7 +48,12 @@ public class AdapterListPodcast<T extends Episodio> extends BaseAdapter {
 		View viewItem = mInflater.inflate(R.layout.item_podcast, null);
 
 		TextView descricao = (TextView)viewItem.findViewById(R.id.item_titulo);
+		ImageView img = (ImageView)viewItem.findViewById(R.id.item_img);
+		
 		descricao.setText(episodio.getTitle());
+		
+		if (episodio.isBaixado())
+			img.setImageResource(R.drawable.save);
 
 		return viewItem;
 	}

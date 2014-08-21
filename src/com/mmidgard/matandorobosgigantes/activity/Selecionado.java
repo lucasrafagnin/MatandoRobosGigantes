@@ -1,6 +1,7 @@
 package com.mmidgard.matandorobosgigantes.activity;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -77,6 +78,11 @@ public class Selecionado extends Activity {
 			favourite.setBackgroundResource(R.drawable.favourite_pressed);
 		else
 			favourite.setBackgroundResource(R.drawable.favourite);
+		
+		if (episodio.isBaixado())
+			download.setBackgroundResource(R.drawable.download_pressed);
+		else
+			download.setBackgroundResource(R.drawable.download);
 
 		titulo.setText(episodio.getTitle());
 		descricao.setText(episodio.getDescription());
@@ -156,7 +162,7 @@ public class Selecionado extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				baixarEpisodio(episodio.getLink(), episodio.getTitle().replaceAll(" ", "_"));
+				baixarEpisodio(episodio.getLink(), episodio.getTitle());
 			}
 		});
 	}
@@ -171,7 +177,7 @@ public class Selecionado extends Activity {
 	}
 
 	public void baixarEpisodio(final String link, final String nome) {
-		new AsyncTask<Void, Integer, Void>() {
+		new AsyncTask<Void, Integer, Boolean>() {
 
 			@Override
 			protected void onPreExecute() {
@@ -184,7 +190,7 @@ public class Selecionado extends Activity {
 			}
 
 			@Override
-			protected Void doInBackground(Void... params) {
+			protected Boolean doInBackground(Void... params) {
 				int count;
 				try {
 					URL url = new URL(link);
@@ -193,7 +199,12 @@ public class Selecionado extends Activity {
 					int lenghtOfFile = conexion.getContentLength();
 
 					InputStream input = new BufferedInputStream(url.openStream());
-					OutputStream output = new FileOutputStream(android.os.Environment.getExternalStorageDirectory() + "/" + nome + ".mp3");
+
+					File f = new File(android.os.Environment.getExternalStorageDirectory() + "/mrg");
+					if (!f.exists())
+						f.mkdirs();
+
+					OutputStream output = new FileOutputStream(android.os.Environment.getExternalStorageDirectory() + "/mrg/" + nome + ".mp3");
 
 					byte data[] = new byte[1024];
 
@@ -210,16 +221,27 @@ public class Selecionado extends Activity {
 					input.close();
 				} catch (Exception e) {
 					e.printStackTrace();
+					File f = new File(android.os.Environment.getExternalStorageDirectory() + "/mrg/" + nome + ".mp3");
+					f.delete();
+					return false;
 				}
-				return null;
+				return true;
 			}
 
 			protected void onProgressUpdate(Integer... progress) {
 				dialog.setProgress(progress[0]);
 			}
 
-			protected void onPostExecute(Void result) {
+			protected void onPostExecute(Boolean result) {
 				dialog.dismiss();
+				if (result) {
+					Toast.makeText(Selecionado.this, "Episódio baixado com sucesso!", Toast.LENGTH_LONG).show();
+					episodio.setBaixado(true);
+					epDao.update(episodio);
+					download.setBackgroundResource(R.drawable.download_pressed);
+				} else {
+					Toast.makeText(Selecionado.this, "Ops, sua conexão com a internet falhou\nTente novamente!", Toast.LENGTH_LONG).show();
+				}
 			};
 
 		}.execute();

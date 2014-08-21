@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
                 android:background="@null"
-                android:src="@drawable/btn_download" />
+                 />
 
             <ImageButton
                 android:id="@+id/btnPrevious"
