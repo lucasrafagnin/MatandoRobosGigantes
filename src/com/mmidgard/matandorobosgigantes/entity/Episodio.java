@@ -1,6 +1,7 @@
 package com.mmidgard.matandorobosgigantes.entity;
 
 import java.io.Serializable;
+import java.util.Comparator;
 import java.util.Date;
 
 import com.j256.ormlite.field.DatabaseField;
@@ -94,4 +95,17 @@ public class Episodio implements Serializable {
 		this.pubDate = pubDate;
 	}
 
+	public static Comparator<Episodio> getListaOrdenada() {
+		return new Comparator<Episodio>() {
+			@Override
+			public int compare(Episodio c1, Episodio c2) {
+				if (c1.getPubDate().after(c2.getPubDate()))
+					return -1;
+				else if (c1.getPubDate().before(c2.getPubDate()))
+					return 1;
+				else
+					return 0;
+			}
+		};
+	}
 }

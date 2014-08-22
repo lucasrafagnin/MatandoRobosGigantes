@@ -6,11 +6,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import org.xml.sax.Attributes;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.sax.Element;
 import android.sax.EndElementListener;
 import android.sax.EndTextElementListener;
@@ -18,7 +18,6 @@ import android.sax.RootElement;
 import android.sax.StartElementListener;
 import android.util.Xml;
 import android.util.Xml.Encoding;
-import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
@@ -70,7 +69,7 @@ public class EpisodioFeedParser extends BaseFeedParser {
 			public void end(String body) {
 				Date formatedDate;
 				try {
-					SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy kk:mm:ss Z");
+					SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy kk:mm:ss", Locale.ENGLISH);
 					formatedDate = sdf.parse(body);
 					episode.setPubDate(formatedDate);
 				} catch (ParseException e) {

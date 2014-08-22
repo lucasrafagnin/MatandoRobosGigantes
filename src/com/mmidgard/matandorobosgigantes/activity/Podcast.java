@@ -1,6 +1,6 @@
 package com.mmidgard.matandorobosgigantes.activity;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import android.app.Activity;
@@ -30,8 +30,6 @@ public class Podcast extends Activity implements OnItemClickListener {
 	private ListView listPodcast;
 	private AdapterListPodcast<Episodio> adapterPodcast;
 	private List<Episodio> episodios;
-	private List<Episodio> baixados = new ArrayList<Episodio>();
-	private List<Episodio> favoritos = new ArrayList<Episodio>();
 	private EpisodioDAO epdao;
 
 	private Button btnTodos;
@@ -88,9 +86,9 @@ public class Podcast extends Activity implements OnItemClickListener {
 						valor++;
 						onProgressUpdate(valor);
 					}
-				} else 
+				} else
 					return "Conecte-se à internet para baixar o Feed";
-				return null;
+				return "";
 			}
 
 			protected void onPostExecute(String v) {
@@ -178,6 +176,8 @@ public class Podcast extends Activity implements OnItemClickListener {
 	}
 
 	private void updateList(List<Episodio> menuselecionado) {
+		if (menuselecionado != null && menuselecionado.size() > 0)
+			Collections.sort(menuselecionado, Episodio.getListaOrdenada());
 		adapterPodcast = new AdapterListPodcast<Episodio>(Podcast.this, menuselecionado);
 
 		listPodcast.setAdapter(adapterPodcast);
