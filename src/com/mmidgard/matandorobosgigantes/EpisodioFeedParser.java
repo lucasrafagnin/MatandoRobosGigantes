@@ -1,11 +1,16 @@
 package com.mmidgard.matandorobosgigantes;
 
 import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.xml.sax.Attributes;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.sax.Element;
 import android.sax.EndElementListener;
 import android.sax.EndTextElementListener;
@@ -13,9 +18,11 @@ import android.sax.RootElement;
 import android.sax.StartElementListener;
 import android.util.Xml;
 import android.util.Xml.Encoding;
+import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
+@SuppressLint("SimpleDateFormat")
 public class EpisodioFeedParser extends BaseFeedParser {
 
 	private Episodio episode;
@@ -50,11 +57,25 @@ public class EpisodioFeedParser extends BaseFeedParser {
 				episode.setTitle(body);
 			}
 		});
-		
+
 		item.getChild("link").setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
 				episode.setLinkSite(body);
+			}
+		});
+
+		item.getChild("pubDate").setEndTextElementListener(new EndTextElementListener() {
+			@Override
+			public void end(String body) {
+				Date formatedDate;
+				try {
+					SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy kk:mm:ss Z");
+					formatedDate = sdf.parse(body);
+					episode.setPubDate(formatedDate);
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 
@@ -85,7 +106,7 @@ public class EpisodioFeedParser extends BaseFeedParser {
 		try {
 			Xml.parse(istream, Encoding.UTF_8, root.getContentHandler());
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			e.printStackTrace();
 		}
 
 		return episodes;

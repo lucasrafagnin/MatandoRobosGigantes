@@ -1,6 +1,7 @@
 package com.mmidgard.matandorobosgigantes.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
@@ -11,12 +12,14 @@ public class Episodio implements Serializable {
 	private static final long serialVersionUID = -5323205640988715688L;
 	@DatabaseField(generatedId = true)
 	private int id;
-	@DatabaseField(columnName="title")
+	@DatabaseField(columnName = "title")
 	private String title;
 	@DatabaseField
 	private String link;
 	@DatabaseField
 	private String description;
+	@DatabaseField
+	private Date pubDate;
 	@DatabaseField
 	private boolean baixado;
 	@DatabaseField
@@ -31,7 +34,7 @@ public class Episodio implements Serializable {
 		return id;
 	}
 
-	public void setId(int id) { 
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -81,6 +84,14 @@ public class Episodio implements Serializable {
 
 	public void setLinkSite(String linkSite) {
 		this.linkSite = linkSite;
+	}
+
+	public Date getPubDate() {
+		return pubDate;
+	}
+
+	public void setPubDate(Date pubDate) {
+		this.pubDate = pubDate;
 	}
 
 }

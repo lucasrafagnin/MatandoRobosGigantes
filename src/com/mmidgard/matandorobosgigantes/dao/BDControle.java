@@ -13,7 +13,7 @@ import com.mmidgard.matandorobosgigantes.entity.Episodio;
 public class BDControle<E> extends OrmLiteSqliteOpenHelper {
 
 	private static final String NOME_BD = "mrg.db";
-	private static int VERSAO_BD = 2;
+	private static int VERSAO_BD = 3;
 
 	public BDControle(Context context) {
 		super(context, NOME_BD, null, VERSAO_BD);

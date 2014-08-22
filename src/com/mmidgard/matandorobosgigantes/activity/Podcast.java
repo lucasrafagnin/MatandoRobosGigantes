@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.mmidgard.matandorobosgigantes.AdapterListPodcast;
 import com.mmidgard.matandorobosgigantes.EpisodioFeedParser;
 import com.mmidgard.matandorobosgigantes.R;
+import com.mmidgard.matandorobosgigantes.Wifi;
 import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
@@ -62,7 +63,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 	}
 
 	public void baixarPodcast() {
-		new AsyncTask<Void, Integer, Void>() {
+		new AsyncTask<Void, Integer, String>() {
 
 			private int valor = 0;
 
@@ -76,20 +77,25 @@ public class Podcast extends Activity implements OnItemClickListener {
 			};
 
 			@Override
-			protected Void doInBackground(Void... params) {
-				EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
-				List<Episodio> list = parser.parse();
-				dialog.setMax(list.size());
-				for (Episodio episodio : list) {
-					if (epdao.getValor(episodio.getTitle(), "title") == null)
-						epdao.insert(episodio);
-					valor++;
-					onProgressUpdate(valor);
-				}
+			protected String doInBackground(Void... params) {
+				if (Wifi.testConnection(Podcast.this)) {
+					EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
+					List<Episodio> list = parser.parse();
+					dialog.setMax(list.size());
+					for (Episodio episodio : list) {
+						if (epdao.getValor(episodio.getTitle(), "title") == null)
+							epdao.insert(episodio);
+						valor++;
+						onProgressUpdate(valor);
+					}
+				} else 
+					return "Conecte-se à internet para baixar o Feed";
 				return null;
 			}
 
-			protected void onPostExecute(Void v) {
+			protected void onPostExecute(String v) {
+				if (!v.equals(""))
+					Toast.makeText(Podcast.this, v, Toast.LENGTH_SHORT).show();
 				updateList(epdao.getAll());
 				dialog.dismiss();
 
