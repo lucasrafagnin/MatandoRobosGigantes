@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 
 import com.mmidgard.matandorobosgigantes.R;
 
-public class MainActivity extends Activity {
+public class MenuInicial extends Activity {
 
 	private Button podcast;
 	private Button vinhetas;
@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this, Podcast.class);
+				Intent i = new Intent(MenuInicial.this, PodcastActivity.class);
 				startActivity(i);
 			}
 		});
@@ -52,7 +52,8 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-
+				Intent i = new Intent(MenuInicial.this, VinhetasActivity.class);
+				startActivity(i);
 			}
 		});
 

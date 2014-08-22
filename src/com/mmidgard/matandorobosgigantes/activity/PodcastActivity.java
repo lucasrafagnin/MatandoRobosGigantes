@@ -25,7 +25,7 @@ import com.mmidgard.matandorobosgigantes.Wifi;
 import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
-public class Podcast extends Activity implements OnItemClickListener {
+public class PodcastActivity extends Activity implements OnItemClickListener {
 
 	private ListView listPodcast;
 	private AdapterListPodcast<Episodio> adapterPodcast;
@@ -51,7 +51,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 		listPodcast = (ListView)findViewById(R.id.list_podcast);
 		baixarPod = (Button)findViewById(R.id.baixarpod);
 
-		epdao = new EpisodioDAO(Podcast.this);
+		epdao = new EpisodioDAO(PodcastActivity.this);
 		episodios = epdao.getAll();
 		dialog = new ProgressDialog(this);
 
@@ -76,7 +76,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 
 			@Override
 			protected String doInBackground(Void... params) {
-				if (Wifi.testConnection(Podcast.this)) {
+				if (Wifi.testConnection(PodcastActivity.this)) {
 					EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
 					List<Episodio> list = parser.parse();
 					dialog.setMax(list.size());
@@ -93,7 +93,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 
 			protected void onPostExecute(String v) {
 				if (!v.equals(""))
-					Toast.makeText(Podcast.this, v, Toast.LENGTH_SHORT).show();
+					Toast.makeText(PodcastActivity.this, v, Toast.LENGTH_SHORT).show();
 				updateList(epdao.getAll());
 				dialog.dismiss();
 
@@ -142,7 +142,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 				btnFavoritos.setBackgroundColor(Color.parseColor("#A32D3D"));
 				btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
 
-				EpisodioDAO epdao = new EpisodioDAO(Podcast.this);
+				EpisodioDAO epdao = new EpisodioDAO(PodcastActivity.this);
 
 				updateList(epdao.getValor(true, "baixado"));
 			}
@@ -160,7 +160,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 				btnTodos.setBackgroundColor(Color.parseColor("#A32D3D"));
 				btnTodos.setTextColor(Color.parseColor("#ffffff"));
 
-				EpisodioDAO epdao = new EpisodioDAO(Podcast.this);
+				EpisodioDAO epdao = new EpisodioDAO(PodcastActivity.this);
 
 				updateList(epdao.getValor(true, "favorito"));
 			}
@@ -178,7 +178,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 	private void updateList(List<Episodio> menuselecionado) {
 		if (menuselecionado != null && menuselecionado.size() > 0)
 			Collections.sort(menuselecionado, Episodio.getListaOrdenada());
-		adapterPodcast = new AdapterListPodcast<Episodio>(Podcast.this, menuselecionado);
+		adapterPodcast = new AdapterListPodcast<Episodio>(PodcastActivity.this, menuselecionado);
 
 		listPodcast.setAdapter(adapterPodcast);
 		listPodcast.setOnItemClickListener(this);
@@ -187,7 +187,7 @@ public class Podcast extends Activity implements OnItemClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		Episodio ep = (Episodio)arg0.getAdapter().getItem(arg2);
-		Intent i = new Intent(Podcast.this, Selecionado.class);
+		Intent i = new Intent(PodcastActivity.this, SelecionadoActivity.class);
 		i.putExtra("episodio", ep);
 		startActivity(i);
 	}

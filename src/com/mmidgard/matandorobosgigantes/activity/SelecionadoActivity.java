@@ -29,7 +29,7 @@ import com.mmidgard.matandorobosgigantes.R;
 import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
-public class Selecionado extends Activity {
+public class SelecionadoActivity extends Activity {
 	private static final String LOG_TAG = "LOG";
 	private Episodio episodio;
 	private TextView titulo;
@@ -90,7 +90,7 @@ public class Selecionado extends Activity {
 		mediaPlayer = new MediaPlayer();
 		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-		epDao = new EpisodioDAO(Selecionado.this);
+		epDao = new EpisodioDAO(SelecionadoActivity.this);
 
 		clicks();
 
@@ -143,7 +143,7 @@ public class Selecionado extends Activity {
 				} else {
 					episodio.setFavorito(true);
 					favourite.setBackgroundResource(R.drawable.favourite_pressed);
-					Toast.makeText(Selecionado.this, "Episódio adicionado aos favoritos!", Toast.LENGTH_LONG).show();
+					Toast.makeText(SelecionadoActivity.this, "Episódio adicionado aos favoritos!", Toast.LENGTH_LONG).show();
 				}
 				epDao.update(episodio);
 			}
@@ -235,12 +235,12 @@ public class Selecionado extends Activity {
 			protected void onPostExecute(Boolean result) {
 				dialog.dismiss();
 				if (result) {
-					Toast.makeText(Selecionado.this, "Episódio baixado com sucesso!", Toast.LENGTH_LONG).show();
+					Toast.makeText(SelecionadoActivity.this, "Episódio baixado com sucesso!", Toast.LENGTH_LONG).show();
 					episodio.setBaixado(true);
 					epDao.update(episodio);
 					download.setBackgroundResource(R.drawable.download_pressed);
 				} else {
-					Toast.makeText(Selecionado.this, "Ops, sua conexão com a internet falhou\nTente novamente!", Toast.LENGTH_LONG).show();
+					Toast.makeText(SelecionadoActivity.this, "Ops, sua conexão com a internet falhou\nTente novamente!", Toast.LENGTH_LONG).show();
 				}
 			};
 
