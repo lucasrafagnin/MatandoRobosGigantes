@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.AdapterListPodcast;
@@ -50,6 +51,8 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 		btnFavoritos = (Button)findViewById(R.id.menu_favoritos);
 		listPodcast = (ListView)findViewById(R.id.list_podcast);
 		baixarPod = (Button)findViewById(R.id.baixarpod);
+		
+		listPodcast.setEmptyView((TextView)findViewById(R.id.list_vazio));
 	}
 
 	@Override
@@ -58,7 +61,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 		epdao = new EpisodioDAO(PodcastActivity.this);
 		episodios = epdao.getAll();
 		dialog = new ProgressDialog(this);
-		
+
 		btnTodos.setBackgroundColor(Color.parseColor("#ffffff"));
 		btnTodos.setTextColor(Color.parseColor("#A32D3D"));
 
@@ -66,7 +69,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 		btnBaixados.setTextColor(Color.parseColor("#ffffff"));
 		btnFavoritos.setBackgroundColor(Color.parseColor("#A32D3D"));
 		btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
-		
+
 		updateList(episodios);
 
 		clicks();
@@ -92,15 +95,21 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 					EpisodioFeedParser parser = new EpisodioFeedParser("http://jovemnerd.com.br/categoria/matando-robos-gigantes/feed/");
 					List<Episodio> list = parser.parse();
 					dialog.setMax(list.size());
+					int total = 0;
 					for (Episodio episodio : list) {
-						if (epdao.getValor(episodio.getTitle(), "title") == null)
+						if (epdao.getValor(episodio.getTitle(), "title") == null) {
 							epdao.insert(episodio);
+							total++;
+						}
 						valor++;
 						onProgressUpdate(valor);
 					}
+					if (total == 0)
+						return "";
+					else
+						return "Baixado " + total + " episódio(s)";
 				} else
 					return "Conecte-se à internet para baixar o Feed";
-				return "";
 			}
 
 			protected void onPostExecute(String v) {

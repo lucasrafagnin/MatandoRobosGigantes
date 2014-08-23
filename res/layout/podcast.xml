@@ -44,6 +44,15 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <TextView 
+        android:id="@+id/list_vazio"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Nenhum episódio disponível\nClique no botão abaixo para ler o FEED"
+        android:background="#fff"/>
+    
     <ListView
         android:id="@+id/list_podcast"
         android:layout_width="fill_parent"
@@ -59,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
         android:background="#A32D3D"
-        android:text="Verificar atualizações"
+        android:text="Baixar o Feed de episódios"
         android:textColor="#fff"
         android:textStyle="bold" />
 
