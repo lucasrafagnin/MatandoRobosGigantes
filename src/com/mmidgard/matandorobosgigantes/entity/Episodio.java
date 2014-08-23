@@ -22,11 +22,13 @@ public class Episodio implements Serializable {
 	@DatabaseField
 	private Date pubDate;
 	@DatabaseField
+	private String linkSite;
+	@DatabaseField
+	private String duration;
+	@DatabaseField
 	private boolean baixado;
 	@DatabaseField
 	private boolean favorito;
-	@DatabaseField
-	private String linkSite;
 
 	public Episodio() {
 	}
@@ -107,5 +109,13 @@ public class Episodio implements Serializable {
 					return 0;
 			}
 		};
+	}
+
+	public String getDuration() {
+		return duration;
+	}
+
+	public void setDuration(String duration) {
+		this.duration = duration;
 	}
 }

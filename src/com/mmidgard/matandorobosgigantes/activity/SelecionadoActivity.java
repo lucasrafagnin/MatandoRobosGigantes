@@ -30,7 +30,6 @@ import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
 public class SelecionadoActivity extends Activity {
-	private static final String LOG_TAG = "LOG";
 	private Episodio episodio;
 	private TextView titulo;
 	private TextView descricao;
@@ -41,6 +40,8 @@ public class SelecionadoActivity extends Activity {
 	private ImageButton favourite;
 	private ImageButton pause;
 	private ImageButton abrirBrowser;
+	private TextView duracaoTotal;
+	private TextView duracaoAtual;
 	private SeekBar progresso;
 	private MediaPlayer mediaPlayer;
 	private EpisodioDAO epDao;
@@ -73,12 +74,14 @@ public class SelecionadoActivity extends Activity {
 		favourite = (ImageButton)findViewById(R.id.btnFavorite);
 		pause = (ImageButton)findViewById(R.id.btnPause);
 		abrirBrowser = (ImageButton)findViewById(R.id.abrir_browser);
+		duracaoTotal = (TextView)findViewById(R.id.duracao_total);
+		duracaoAtual = (TextView)findViewById(R.id.duracao_atual);
 
 		if (episodio.isFavorito())
 			favourite.setBackgroundResource(R.drawable.favourite_pressed);
 		else
 			favourite.setBackgroundResource(R.drawable.favourite);
-		
+
 		if (episodio.isBaixado())
 			download.setBackgroundResource(R.drawable.download_pressed);
 		else
@@ -86,6 +89,7 @@ public class SelecionadoActivity extends Activity {
 
 		titulo.setText(episodio.getTitle());
 		descricao.setText(episodio.getDescription());
+		duracaoTotal.setText(episodio.getDuration());
 
 		mediaPlayer = new MediaPlayer();
 		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -109,7 +113,20 @@ public class SelecionadoActivity extends Activity {
 
 	public void seekUpdation() {
 		progresso.setProgress(mediaPlayer.getCurrentPosition());
+		duracaoAtual.setText(getTimeString(mediaPlayer.getCurrentPosition()));
 		seekHandler.postDelayed(run, 1000);
+	}
+
+	private String getTimeString(long millis) {
+		StringBuffer buf = new StringBuffer();
+
+		int hours = (int)(millis / (1000 * 60 * 60));
+		int minutes = (int)((millis % (1000 * 60 * 60)) / (1000 * 60));
+		int seconds = (int)(((millis % (1000 * 60 * 60)) % (1000 * 60)) / 1000);
+
+		buf.append(String.format("%01d", hours)).append(":").append(String.format("%02d", minutes)).append(":").append(String.format("%02d", seconds));
+
+		return buf.toString();
 	}
 
 	private void clicks() {

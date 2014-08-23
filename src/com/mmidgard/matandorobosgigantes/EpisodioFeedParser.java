@@ -94,6 +94,13 @@ public class EpisodioFeedParser extends BaseFeedParser {
 			}
 		});
 
+		item.getChild("http://www.itunes.com/dtds/podcast-1.0.dtd", "duration").setEndTextElementListener(new EndTextElementListener() {
+			@Override
+			public void end(String body) {
+				episode.setDuration(body);
+			}
+		});
+
 		item.setEndElementListener(new EndElementListener() {
 			@Override
 			public void end() {
