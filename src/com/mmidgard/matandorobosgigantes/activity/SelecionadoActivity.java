@@ -45,6 +45,7 @@ public class SelecionadoActivity extends Activity {
 	private SeekBar progresso;
 	private MediaPlayer mediaPlayer;
 	private EpisodioDAO epDao;
+	private boolean offline = false;
 
 	private Handler seekHandler = new Handler();
 	private ProgressDialog dialog;
@@ -58,6 +59,8 @@ public class SelecionadoActivity extends Activity {
 		Intent i = getIntent();
 		Bundle b = i.getExtras();
 		episodio = (Episodio)b.get("episodio");
+		offline = b.getBoolean("offline");
+
 		dialog = new ProgressDialog(this);
 
 		setarInformacoes();
@@ -98,7 +101,10 @@ public class SelecionadoActivity extends Activity {
 
 		clicks();
 
-		streaming(episodio.getLink());
+		if (!offline)
+			streaming(episodio.getLink());
+		else
+			playLocal();
 		progresso.setMax(mediaPlayer.getDuration());
 
 		seekUpdation();
@@ -190,6 +196,16 @@ public class SelecionadoActivity extends Activity {
 			mediaPlayer.prepare();
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	public void playLocal() {
+		try {
+			mediaPlayer.setDataSource(android.os.Environment.getExternalStorageDirectory() + "/mrg/" + episodio.getTitle() + ".mp3");
+			mediaPlayer.prepare();
+		} catch (Exception e) {
+			e.printStackTrace();
+			Toast.makeText(SelecionadoActivity.this, "Não foi encontrado o episódio na pasta 'mrg'.\nEfetue o download novamente", Toast.LENGTH_LONG).show();
 		}
 	}
 

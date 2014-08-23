@@ -189,6 +189,11 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 		Episodio ep = (Episodio)arg0.getAdapter().getItem(arg2);
 		Intent i = new Intent(PodcastActivity.this, SelecionadoActivity.class);
 		i.putExtra("episodio", ep);
+		if (ep.isBaixado())
+			i.putExtra("offline", true);
+		else
+			i.putExtra("offline", false);
+
 		startActivity(i);
 	}
 }
