@@ -44,15 +44,15 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <TextView 
+    <TextView
         android:id="@+id/list_vazio"
-        android:visibility="gone"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="#fff"
         android:text="Nenhum episódio disponível\nClique no botão abaixo para ler o FEED"
-        android:background="#fff"/>
-    
+        android:visibility="gone" />
+
     <ListView
         android:id="@+id/list_podcast"
         android:layout_width="fill_parent"

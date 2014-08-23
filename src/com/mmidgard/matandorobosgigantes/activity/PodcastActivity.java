@@ -52,7 +52,6 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 		listPodcast = (ListView)findViewById(R.id.list_podcast);
 		baixarPod = (Button)findViewById(R.id.baixarpod);
 		
-		listPodcast.setEmptyView((TextView)findViewById(R.id.list_vazio));
 	}
 
 	@Override
@@ -147,6 +146,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 				btnBaixados.setTextColor(Color.parseColor("#ffffff"));
 				btnFavoritos.setBackgroundColor(Color.parseColor("#A32D3D"));
 				btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
+				
 				updateList(episodios);
 			}
 		});
@@ -164,7 +164,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 				btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
 
 				EpisodioDAO epdao = new EpisodioDAO(PodcastActivity.this);
-
+				
 				updateList(epdao.getValor(true, "baixado"));
 			}
 		});
