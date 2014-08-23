@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.R;
+import com.mmidgard.matandorobosgigantes.Wifi;
 import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
@@ -140,9 +141,13 @@ public class SelecionadoActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				mediaPlayer.start();
-				play.setVisibility(View.GONE);
-				pause.setVisibility(View.VISIBLE);
+				if (offline || Wifi.testConnection(SelecionadoActivity.this)) {
+					mediaPlayer.start();
+					play.setVisibility(View.GONE);
+					pause.setVisibility(View.VISIBLE);
+				} else {
+					Toast.makeText(SelecionadoActivity.this, "Conecte-se à internet para ouvir o episódio", Toast.LENGTH_SHORT).show();
+				}
 			}
 		});
 
@@ -206,6 +211,11 @@ public class SelecionadoActivity extends Activity {
 		} catch (Exception e) {
 			e.printStackTrace();
 			Toast.makeText(SelecionadoActivity.this, "Não foi encontrado o episódio na pasta 'mrg'.\nEfetue o download novamente", Toast.LENGTH_LONG).show();
+			episodio.setBaixado(false);
+			epDao.update(episodio);
+			download.setBackgroundResource(R.drawable.download);
+			if (!offline)
+				streaming(episodio.getLink());
 		}
 	}
 

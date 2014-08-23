@@ -50,11 +50,23 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 		btnFavoritos = (Button)findViewById(R.id.menu_favoritos);
 		listPodcast = (ListView)findViewById(R.id.list_podcast);
 		baixarPod = (Button)findViewById(R.id.baixarpod);
+	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
 		epdao = new EpisodioDAO(PodcastActivity.this);
 		episodios = epdao.getAll();
 		dialog = new ProgressDialog(this);
+		
+		btnTodos.setBackgroundColor(Color.parseColor("#ffffff"));
+		btnTodos.setTextColor(Color.parseColor("#A32D3D"));
 
+		btnBaixados.setBackgroundColor(Color.parseColor("#A32D3D"));
+		btnBaixados.setTextColor(Color.parseColor("#ffffff"));
+		btnFavoritos.setBackgroundColor(Color.parseColor("#A32D3D"));
+		btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
+		
 		updateList(episodios);
 
 		clicks();
