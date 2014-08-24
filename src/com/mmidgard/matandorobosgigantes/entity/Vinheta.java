@@ -13,12 +13,15 @@ public class Vinheta implements Serializable {
 	@DatabaseField(generatedId = true)
 	private int id;
 	@DatabaseField
-	private String nome;
+	private String titulo;
 	@DatabaseField
-	private String urlImagem;
+	private String imagem;
+	@DatabaseField
+	private String descricao;
+	@DatabaseField
+	private String link;
 
 	public Vinheta() {
-
 	}
 
 	public int getId() {
@@ -29,20 +32,36 @@ public class Vinheta implements Serializable {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getImagem() {
+		return imagem;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
-	public String getUrlImagem() {
-		return urlImagem;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setUrlImagem(String urlImagem) {
-		this.urlImagem = urlImagem;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 }

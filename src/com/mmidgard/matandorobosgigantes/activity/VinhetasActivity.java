@@ -13,6 +13,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
 import com.mmidgard.matandorobosgigantes.AdapterGridVinhetas;
+import com.mmidgard.matandorobosgigantes.BaixarXml;
 import com.mmidgard.matandorobosgigantes.R;
 import com.mmidgard.matandorobosgigantes.entity.Vinheta;
 
@@ -42,6 +43,8 @@ public class VinhetasActivity extends Activity {
 		Vinheta v6 = new Vinheta();
 		vinhetas.add(v6);
 		setGridview(vinhetas);
+		
+		new BaixarXml(VinhetasActivity.this).execute();
 	}
 
 	private void setGridview(List<Vinheta> listaVinhetas) {
