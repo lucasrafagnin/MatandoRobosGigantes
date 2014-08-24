@@ -16,7 +16,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.AdapterListPodcast;
@@ -51,7 +50,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 		btnFavoritos = (Button)findViewById(R.id.menu_favoritos);
 		listPodcast = (ListView)findViewById(R.id.list_podcast);
 		baixarPod = (Button)findViewById(R.id.baixarpod);
-		
+
 	}
 
 	@Override
@@ -146,8 +145,8 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 				btnBaixados.setTextColor(Color.parseColor("#ffffff"));
 				btnFavoritos.setBackgroundColor(Color.parseColor("#A32D3D"));
 				btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
-				
-				updateList(episodios);
+
+				updateList(epdao.getAll());
 			}
 		});
 
@@ -164,7 +163,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 				btnFavoritos.setTextColor(Color.parseColor("#ffffff"));
 
 				EpisodioDAO epdao = new EpisodioDAO(PodcastActivity.this);
-				
+
 				updateList(epdao.getValor(true, "baixado"));
 			}
 		});
@@ -197,6 +196,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 	}
 
 	private void updateList(List<Episodio> menuselecionado) {
+		episodios = menuselecionado;
 		if (menuselecionado != null && menuselecionado.size() > 0)
 			Collections.sort(menuselecionado, Episodio.getListaOrdenada());
 		adapterPodcast = new AdapterListPodcast<Episodio>(PodcastActivity.this, menuselecionado);

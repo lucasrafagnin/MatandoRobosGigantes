@@ -9,7 +9,9 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
+import com.google.android.youtube.player.YouTubeIntents;
 import com.mmidgard.matandorobosgigantes.R;
 
 public class MenuInicial extends Activity {
@@ -21,6 +23,7 @@ public class MenuInicial extends Activity {
 	private ImageButton beto;
 	private ImageButton diogo;
 	private ImageButton affonso;
+	private static final String PLAYLIST_ID = "PLYk3h-jODeBL94fzGtyGWj2qjF_ndnpPC";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +64,13 @@ public class MenuInicial extends Activity {
 
 			@Override
 			public void onClick(View v) {
-
+				try {
+					Intent intent = YouTubeIntents.createOpenPlaylistIntent(MenuInicial.this, PLAYLIST_ID);
+					startActivity(intent);
+				} catch (Exception e) {
+					e.printStackTrace();
+					Toast.makeText(MenuInicial.this, "Ops...Verifique se o Aplicativo do Youtube esta atualizado", Toast.LENGTH_SHORT).show();
+				}
 			}
 		});
 

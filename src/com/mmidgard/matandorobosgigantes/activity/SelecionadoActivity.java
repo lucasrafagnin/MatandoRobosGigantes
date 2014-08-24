@@ -196,6 +196,26 @@ public class SelecionadoActivity extends Activity {
 				baixarEpisodio(episodio.getLink(), episodio.getTitle());
 			}
 		});
+
+		next.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				naoDisponivel();
+			}
+		});
+
+		previous.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				naoDisponivel();
+			}
+		});
+	}
+
+	private void naoDisponivel() {
+		Toast.makeText(SelecionadoActivity.this, "Esta função estará disponível em breve", Toast.LENGTH_SHORT).show();
 	}
 
 	public void streaming(String url) {
