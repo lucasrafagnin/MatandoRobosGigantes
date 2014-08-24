@@ -26,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.R;
-import com.mmidgard.matandorobosgigantes.Wifi;
 import com.mmidgard.matandorobosgigantes.dao.EpisodioDAO;
 import com.mmidgard.matandorobosgigantes.entity.Episodio;
 
@@ -47,6 +46,7 @@ public class SelecionadoActivity extends Activity {
 	private MediaPlayer mediaPlayer;
 	private EpisodioDAO epDao;
 	private boolean offline = false;
+	private boolean doubleClick = false;
 
 	private Handler seekHandler = new Handler();
 	private ProgressDialog dialog;
@@ -119,9 +119,11 @@ public class SelecionadoActivity extends Activity {
 	};
 
 	public void seekUpdation() {
-		progresso.setProgress(mediaPlayer.getCurrentPosition());
-		duracaoAtual.setText(getTimeString(mediaPlayer.getCurrentPosition()));
-		seekHandler.postDelayed(run, 1000);
+		if (mediaPlayer != null) {
+			progresso.setProgress(mediaPlayer.getCurrentPosition());
+			duracaoAtual.setText(getTimeString(mediaPlayer.getCurrentPosition()));
+			seekHandler.postDelayed(run, 1000);
+		}
 	}
 
 	private String getTimeString(long millis) {
@@ -141,11 +143,12 @@ public class SelecionadoActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				if (offline || Wifi.testConnection(SelecionadoActivity.this)) {
+				try {
 					mediaPlayer.start();
 					play.setVisibility(View.GONE);
 					pause.setVisibility(View.VISIBLE);
-				} else {
+				} catch (Exception e) {
+					e.printStackTrace();
 					Toast.makeText(SelecionadoActivity.this, "Conecte-se à internet para ouvir o episódio", Toast.LENGTH_SHORT).show();
 				}
 			}
@@ -288,6 +291,31 @@ public class SelecionadoActivity extends Activity {
 			};
 
 		}.execute();
+	}
+
+	@Override
+	public void onBackPressed() {
+		if (mediaPlayer.isPlaying()) {
+			if (doubleClick) {
+				doubleClick = false;
+				mediaPlayer.stop();
+				mediaPlayer.release();
+				mediaPlayer = null;
+				finish();
+				return;
+			}
+			doubleClick = true;
+			Toast.makeText(SelecionadoActivity.this, "Pressione novamente para sair\nIrá parar o episódio", Toast.LENGTH_SHORT).show();
+
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					doubleClick = false;
+				}
+			}, 2000);
+		} else {
+			finish();
+		}
 	}
 
 }
