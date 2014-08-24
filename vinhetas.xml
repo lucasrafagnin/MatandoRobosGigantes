@@ -1,480 +1,481 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<versao>1</versao>
-<vinhetas>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 203: TAPA DE JESUS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/203.png</imagem>
-		<descricao>Na entrada de hoje, Patrick Lima, do @SpamCast, e Beto “Número Um do Microfone” Estrada se juntaram ao LeCrae para  distribuir o Tapa de Jesus</descricao>
-		<link>Na entrada de hoje, Patrick Lima, do @SpamCast, e Beto “Número Um do Microfone” Estrada se juntaram ao LeCrae para  distribuir o Tapa de Jesus.</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 200: ROBÔ SOB A MONTANHA!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/200.png</imagem>
-		<descricao>Na entrada de hoje, os matadores Beto, Affonso e Didi Braguinha marcham contra a desolação de Smaug!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/90095/0/Entrada_200_Robo_sob_a_montanha.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 199: NATAL ROBÔ!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/199.png</imagem>
-		<descricao>Na entrada de hoje, os ouvintes Marcio Mesquita (e Tuana Mesquita) se juntaram ao Mestre Assis Valente para desejar um Feliz Natal Robótico!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/89094/0/Entrada_199_Natal_Robo.mp3</link>
-	</vinheta>
+<entradas>
+	<versao>1</versao>
+	<vinhetas>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 198: ROBÔ DE IPANEMA</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/198.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Daniel Seixas se juntou ao mestre Tom Jobim para homenagear o Robô de Ipanema!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/88886/0/Entrada_198_Robo_de_Ipanema.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 203: TAPA DE JESUS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/203.png</imagem>
+			<descricao>Na entrada de hoje, Patrick Lima, do @SpamCast, e Beto “Número Um do Microfone” Estrada se juntaram ao LeCrae para  distribuir o Tapa de Jesus</descricao>
+			<link>Na entrada de hoje, Patrick Lima, do @SpamCast, e Beto “Número Um do Microfone” Estrada se juntaram ao LeCrae para  distribuir o Tapa de Jesus.</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 197: COMANDO ROBÓTICO!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/197.png</imagem>
-		<descricao>Na entrada de hoje, o Rei dos Escritores Affonso Solano se junta ao Comando mais brilhante da galáxia!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/88560/0/Entrada_197_Comando_Robotico.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 200: ROBÔ SOB A MONTANHA!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/200.png</imagem>
+			<descricao>Na entrada de hoje, os matadores Beto, Affonso e Didi Braguinha marcham contra a desolação de Smaug!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/90095/0/Entrada_200_Robo_sob_a_montanha.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 196: ESTROGONOFICAMENTE ARMADOS!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1951.png</imagem>
-		<descricao>Na entrada de hoje, a ouvinte Rosana  Riedel e o pessoal do Estúdio FilBuc prepararam uma entrada sensacional com a Cyndi Lauper </descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/88538/0/Entrada_196_Estrogonoficamente_Armados.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 199: NATAL ROBÔ!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/199.png</imagem>
+			<descricao>Na entrada de hoje, os ouvintes Marcio Mesquita (e Tuana Mesquita) se juntaram ao Mestre Assis Valente para desejar um Feliz Natal Robótico!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/89094/0/Entrada_199_Natal_Robo.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 198: ROBÔ DE IPANEMA</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/198.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Daniel Seixas se juntou ao mestre Tom Jobim para homenagear o Robô de Ipanema!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/88886/0/Entrada_198_Robo_de_Ipanema.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 197: COMANDO ROBÓTICO!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/197.png</imagem>
+			<descricao>Na entrada de hoje, o Rei dos Escritores Affonso Solano se junta ao Comando mais brilhante da galáxia!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/88560/0/Entrada_197_Comando_Robotico.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 196: ESTROGONOFICAMENTE ARMADOS!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1951.png</imagem>
+			<descricao>Na entrada de hoje, a ouvinte Rosana  Riedel e o pessoal do Estúdio FilBuc prepararam uma entrada sensacional com a Cyndi Lauper </descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/88538/0/Entrada_196_Estrogonoficamente_Armados.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 195: OS MELHORES DA INTERNET!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/195.png</imagem>
+			<descricao>Na entrada de hoje, os ouvintes Ítalo Barbosa, Vitória Barbosa procuram o Oasis. </descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/86040/0/Entrada_195_Os_Melhores_da_Internet.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 194: CAÇADORES DE ROBÔS GIGANTES</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/194.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Álvaro Xavier caça aventuras com os Patadores de Robôs Gigantes</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/85220/0/Entrada_194_Cacadores_de_robos_gigantes.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 193: SOMOS AMIGOS!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/193.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano desliza na entrada de hoje com o Fagner. </descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/84009/0/Entrada_193_Somos_Amigos.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 192: VIROU SUCATA!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/192.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Patrick Lima, do SpamCast, acelera com o pessoal do Metallica</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/83949/0/Entrada_192_Virou_Sucata.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 191: HERÓIS DO MRG</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/191.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Caio Di Pacce se torna o herói do dia com o Metallica</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/83761/0/Entrada_191_Herois_do_MRG.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 190: QUADRINHOS TAMBÉM É MASSA!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/190.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Major Cenoura dão sorte na entrada de hoje com o Daft Punk. </descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/81638/0/Entrada_190_Quadrinhos_Tambem_e_Massa.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 189: SONHOS DE ROBÔ!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/189.png</imagem>
+			<descricao>Na entrada de hoje, os ouvintes Marcio Mesquita e Tuana Mesquita contam carneirinhos com o pessoal do Kid Abelha</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/81339/0/Entrada_189_Sonhos_Robos.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 188: ROBÔS HERMANOS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/188.png</imagem>
+			<descricao>Na entrada de hoje, os ouvintes Michael Christian e Anderson Luiz de Souza se juntam aos Los Hermanos nessa entrada vencedora.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/80397/0/Entrada_188_Robo_Hermanos.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 187: OK, AGORA VAI!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/187.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Anderson Kbessa fez essa entrada com apenas 50 Centavos.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/79412/0/Entrada_187_Ok_Agora_Vai.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 186: MINHA VIDA ANTI-ROBÓTICA</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/186.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano mata robôs com o Lulu Santos. </descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/78553/0/Entrada_186_Minha_Vida_Anti_Robotica.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 185: O BOTÃO VERMELHO!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1851.jpg</imagem>
+			<descricao>Na entrada de hoje, os ouvintes do FarandolaCrew entram em rota de colisão com o JayZ e o Linkin Park. </descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/78180/0/Entrada_185_O_Botao_Vermelho.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 184: AI BETÃO!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/184.png</imagem>
+			<descricao>Na entrada de hoje, os ouvintes Lorena Nóbrega e Leonardo Bandeira se juntam a Jane Birkin e Serge Gainsbourg para gemer com o MRG</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/77349/0/Entrada_184_Ai_Betao.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 183: O F5 VOU APERTAR</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/183.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Patrick Lima se junta ao Scorpions para te agitar como um furacão!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76598/0/Entrada_183_F5_vou_Apertar.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 182: EDELWEISS E O ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/182.png</imagem>
+			<descricao>Na entrada de hoje, Diogo Braga se junta ao Capitão Von Trapp para uma bela cantiga!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76489/0/Entrada_182_Edelweiss_e_o_robo.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 181: FRIENDS – SEUS AMIGOS ROBÔS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/181.png</imagem>
+			<descricao>Na entrada de hoje, Caio di Pacce se junta aos amigos robóticos do The Rembrandts.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76488/0/Entrada_181_Friends_seus_amigos_robos.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 180: METEORO DE CANHÃO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/180.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga veem uma chuva de meteoros com o o Luan Santana.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75303/0/Entrada_180_Meteoro_de_canhao.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 179: SÓ OS ROBÔS SABEM</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/179.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Roberto Duque Estrada se juntam para homenagear o Charlie Brown Jr</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75304/0/Entrada_179_So_os_Robos_sabem.mp3</link>
+		</vinheta>
+			<vinheta>
+			<titulo>ENTRADA MUSICAL 178B: MRG IN BLACK</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1781.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Patrick Lima se veste de preto com o pessoal do AC/DC</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/89104/0/Entrada_178b_MRG_In_Black.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 195: OS MELHORES DA INTERNET!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/195.png</imagem>
-		<descricao>Na entrada de hoje, os ouvintes Ítalo Barbosa, Vitória Barbosa procuram o Oasis. </descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/86040/0/Entrada_195_Os_Melhores_da_Internet.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 178: SAI DO LUTO ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/178.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Patrick Lima se veste de preto com o AC/DC</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75307/0/Entrada_178_Sai_do_luto_robo.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 194: CAÇADORES DE ROBÔS GIGANTES</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/194.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Álvaro Xavier caça aventuras com os Patadores de Robôs Gigantes</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/85220/0/Entrada_194_Cacadores_de_robos_gigantes.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 177: HOJE VOU MATAR ROBÔ GIGANTE MEU AMOR</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/177.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Júlio Ito se junta a Daniel numa declaração de amor</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75310/0/Entrada_177_Hoje_vou_matar_robo_gigante_meu_amor.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 193: SOMOS AMIGOS!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/193.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano desliza na entrada de hoje com o Fagner. </descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/84009/0/Entrada_193_Somos_Amigos.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 176: VAMOS VAMOS MRG</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/176.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Júlio Ito vai de volta para o futuro com Chuck Berry </descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75313/0/Entrada_176_Vamos_vamos_MRG.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 192: VIROU SUCATA!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/192.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Patrick Lima, do SpamCast, acelera com o pessoal do Metallica</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/83949/0/Entrada_192_Virou_Sucata.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 175: 1 MILHÃO DE ROBÔS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/175.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte o pessoal do Gagplay! se junta a banda Pollo para caçar mais de um milhão de robôs</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75316/0/Entrada_175_1_milhao_de_robos.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 191: HERÓIS DO MRG</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/191.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Caio Di Pacce se torna o herói do dia com o Metallica</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/83761/0/Entrada_191_Herois_do_MRG.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 174: PRA MIM TANTO FAZ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/174.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Roberto Estrada cantam que nem pelas saco com o Naldo!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75319/0/Entrada_174_Pra_mim_tanto_faz.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 190: QUADRINHOS TAMBÉM É MASSA!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/190.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Major Cenoura dão sorte na entrada de hoje com o Daft Punk. </descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/81638/0/Entrada_190_Quadrinhos_Tambem_e_Massa.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 173: VOCÊ PODERIA SER MINHA</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/173.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Zumbi do Mato ficou vadiando com o Guns N’ Roses</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75322/0/Entrada_173_Voce_poderia_ser_minha.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 189: SONHOS DE ROBÔ!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/189.png</imagem>
-		<descricao>Na entrada de hoje, os ouvintes Marcio Mesquita e Tuana Mesquita contam carneirinhos com o pessoal do Kid Abelha</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/81339/0/Entrada_189_Sonhos_Robos.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 171: GUERRA DOS TRONOS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/171.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Roberto Estrada se juntam a Tyrion Lannister para ouvir o MRG!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75332/0/Entrada_171_Guerra_dos_Tronos.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 188: ROBÔS HERMANOS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/188.png</imagem>
-		<descricao>Na entrada de hoje, os ouvintes Michael Christian e Anderson Luiz de Souza se juntam aos Los Hermanos nessa entrada vencedora.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/80397/0/Entrada_188_Robo_Hermanos.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 170: UMA BALA SÓ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/170.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Osni Arturo Francisco Júnior se juntou a Tom Jobim para falar do assassinato do robô!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75335/0/Entrada_170_Uma_bala_so.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 187: OK, AGORA VAI!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/187.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Anderson Kbessa fez essa entrada com apenas 50 Centavos.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/79412/0/Entrada_187_Ok_Agora_Vai.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 169: ROBÔBO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/169.png</imagem>
+			<descricao>Na entrada de hoje,  Affonso Solano e Diogo Braga se juntam a Carly Jae Japsen para ligarem para a C.R.E.U.Z.A.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75338/0/Entrada_169_Robobo..mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 186: MINHA VIDA ANTI-ROBÓTICA</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/186.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano mata robôs com o Lulu Santos. </descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/78553/0/Entrada_186_Minha_Vida_Anti_Robotica.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 167: CEMITÉRIO ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/167.png</imagem>
+			<descricao>Na entrada de hoje,  o ouvinte Leaondro Antônio se juntou ao Metallica para ir ao cemitério de robôs gigantes!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75347/0/Entrada_167_Cemiterio_robo.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 185: O BOTÃO VERMELHO!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1851.jpg</imagem>
-		<descricao>Na entrada de hoje, os ouvintes do FarandolaCrew entram em rota de colisão com o JayZ e o Linkin Park. </descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/78180/0/Entrada_185_O_Botao_Vermelho.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 166: DEVIA TER…</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/166.png</imagem>
+			<descricao>Na entrada de hoje,  o querido porteiro Sardi se juntou aos Titãs para enviar uma mensagem direto da portaria.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75350/0/Entrada_166_Devia_ter.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 184: AI BETÃO!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/184.png</imagem>
-		<descricao>Na entrada de hoje, os ouvintes Lorena Nóbrega e Leonardo Bandeira se juntam a Jane Birkin e Serge Gainsbourg para gemer com o MRG</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/77349/0/Entrada_184_Ai_Betao.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 165: NERD DRAMA</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/165.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Johnny Menezes e o Beto curtem a Vida Loka com os Racionais MC</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75353/0/Entrada_165_Nerd_drama.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 183: O F5 VOU APERTAR</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/183.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Patrick Lima se junta ao Scorpions para te agitar como um furacão!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76598/0/Entrada_183_F5_vou_Apertar.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 164: TIRO NO ROBÔ, PLAY NO MRG</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/164.png</imagem>
+			<descricao>Na entrada de hoje, o pessoal do DescontrolePod se juntou aos Saltimbancos para dar play no MRG</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75356/0/Entrada_164_Tiro_no_Robo_play_no_MRG.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 182: EDELWEISS E O ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/182.png</imagem>
-		<descricao>Na entrada de hoje, Diogo Braga se junta ao Capitão Von Trapp para uma bela cantiga!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76489/0/Entrada_182_Edelweiss_e_o_robo.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 163: VIVER PRA VENCER</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/163.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga vivem para vencer com o Paul Stanley.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75359/0/Entrada_163_Viver_pra_Vencer.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 181: FRIENDS – SEUS AMIGOS ROBÔS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/181.png</imagem>
-		<descricao>Na entrada de hoje, Caio di Pacce se junta aos amigos robóticos do The Rembrandts.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76488/0/Entrada_181_Friends_seus_amigos_robos.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 162: HE-MAN NO TREM</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/162.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam ao Trem da Alegria e botam a cuequinha do He-Man!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75362/0/Entrada_162_Heman_no_Trem.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 180: METEORO DE CANHÃO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/180.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga veem uma chuva de meteoros com o o Luan Santana.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75303/0/Entrada_180_Meteoro_de_canhao.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 161: ROBÔ NO ESCURO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/161.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntaram ao Don Omar para dançar kuduro</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75365/0/Entrada_161_Robo_no_escuro.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 179: SÓ OS ROBÔS SABEM</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/179.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Roberto Duque Estrada se juntam para homenagear o Charlie Brown Jr</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75304/0/Entrada_179_So_os_Robos_sabem.mp3</link>
-	</vinheta>
+			<titulo>ENTRADA MUSICAL 159: SOBRA NO ORÇAMENTO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/159.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano,  Diogo Braga e Roberto Estrada fizeram essa entrada com uns trocados da C.R.E.U.Z.A.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75372/0/Entrada_159_Sobra_no_orcamento.mp3</link>
+		</vinheta>
 		<vinheta>
-		<titulo>ENTRADA MUSICAL 178B: MRG IN BLACK</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1781.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Patrick Lima se veste de preto com o pessoal do AC/DC</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/89104/0/Entrada_178b_MRG_In_Black.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 178: SAI DO LUTO ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/178.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Patrick Lima se veste de preto com o AC/DC</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75307/0/Entrada_178_Sai_do_luto_robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 177: HOJE VOU MATAR ROBÔ GIGANTE MEU AMOR</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/177.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Júlio Ito se junta a Daniel numa declaração de amor</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75310/0/Entrada_177_Hoje_vou_matar_robo_gigante_meu_amor.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 176: VAMOS VAMOS MRG</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/176.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Júlio Ito vai de volta para o futuro com Chuck Berry </descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75313/0/Entrada_176_Vamos_vamos_MRG.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 175: 1 MILHÃO DE ROBÔS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/175.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte o pessoal do Gagplay! se junta a banda Pollo para caçar mais de um milhão de robôs</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75316/0/Entrada_175_1_milhao_de_robos.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 174: PRA MIM TANTO FAZ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/174.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Roberto Estrada cantam que nem pelas saco com o Naldo!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75319/0/Entrada_174_Pra_mim_tanto_faz.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 173: VOCÊ PODERIA SER MINHA</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/173.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Zumbi do Mato ficou vadiando com o Guns N’ Roses</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75322/0/Entrada_173_Voce_poderia_ser_minha.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 171: GUERRA DOS TRONOS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/171.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Roberto Estrada se juntam a Tyrion Lannister para ouvir o MRG!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75332/0/Entrada_171_Guerra_dos_Tronos.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 170: UMA BALA SÓ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/170.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Osni Arturo Francisco Júnior se juntou a Tom Jobim para falar do assassinato do robô!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75335/0/Entrada_170_Uma_bala_so.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 169: ROBÔBO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/169.png</imagem>
-		<descricao>Na entrada de hoje,  Affonso Solano e Diogo Braga se juntam a Carly Jae Japsen para ligarem para a C.R.E.U.Z.A.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75338/0/Entrada_169_Robobo..mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 167: CEMITÉRIO ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/167.png</imagem>
-		<descricao>Na entrada de hoje,  o ouvinte Leaondro Antônio se juntou ao Metallica para ir ao cemitério de robôs gigantes!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75347/0/Entrada_167_Cemiterio_robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 166: DEVIA TER…</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/166.png</imagem>
-		<descricao>Na entrada de hoje,  o querido porteiro Sardi se juntou aos Titãs para enviar uma mensagem direto da portaria.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75350/0/Entrada_166_Devia_ter.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 165: NERD DRAMA</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/165.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Johnny Menezes e o Beto curtem a Vida Loka com os Racionais MC</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75353/0/Entrada_165_Nerd_drama.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 164: TIRO NO ROBÔ, PLAY NO MRG</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/164.png</imagem>
-		<descricao>Na entrada de hoje, o pessoal do DescontrolePod se juntou aos Saltimbancos para dar play no MRG</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75356/0/Entrada_164_Tiro_no_Robo_play_no_MRG.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 163: VIVER PRA VENCER</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/163.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga vivem para vencer com o Paul Stanley.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75359/0/Entrada_163_Viver_pra_Vencer.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 162: HE-MAN NO TREM</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/162.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam ao Trem da Alegria e botam a cuequinha do He-Man!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75362/0/Entrada_162_Heman_no_Trem.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 161: ROBÔ NO ESCURO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/161.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntaram ao Don Omar para dançar kuduro</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75365/0/Entrada_161_Robo_no_escuro.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 159: SOBRA NO ORÇAMENTO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/159.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano,  Diogo Braga e Roberto Estrada fizeram essa entrada com uns trocados da C.R.E.U.Z.A.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75372/0/Entrada_159_Sobra_no_orcamento.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 158: OZZY PERDEU O FONE</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/158.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano,  Diogo Braga e Roberto Estrada se juntam a Ozzy para lamentar pelo fone perdido..</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75375/0/Entrada_158_Ozzy_Perdeu_o_fone.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 157: O PODER DO CORAÇÃO METÁLICO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/157.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano,  Diogo Braga e Roberto Estrada se juntam a Huey Lewis para falar do poder do amor.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75382/0/Entrada_157_O_Poder_do_Coracao_Metalico.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 156: ELVIS FOGE DO ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1561.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Akira Sanoki se junta a Brenda Lee</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75387/0/Entrada_156_Elvis_foge_do_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 155: DJAVAN ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/155.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam a Djavan para procurar  o Sardi.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75392/0/Entrada_155_Djavan_RoBo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 154: MRG PRA ENTRETER</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/154.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Diogo Lunga compôs uma música Oooh, pra entreter!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75500/0/Entrada_154_Mrg_pra_Entreter.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 153: CONTAGEM REGRESSIVA</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/153.png</imagem>
-		<descricao>Na entrada de hoje, o ouvinte Benhur, da banda Hibria, se juntam a Europe na contagem final.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75503/0/Entrada_153_Contagem_regressiva.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 152: DOVAHKIIN E O ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/152.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam ao Dovahkiin para ouvir o MRG!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75506/0/Entrada_152_Dovahkiin_e_o_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 151: DESCONTROLANDO, DERRUBO TUDO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/151.png</imagem>
-		<descricao>Na entrada de hoje, os ouvintes Jóh e Lili ,do DescontrolePod, se juntam Erasure e perdem o controle do amor.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75509/0/Entrada_151_Descontrolado_derrubo_tudo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 150: MÁQUINA NÃO ME PEGA</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/150.png</imagem>
-		<descricao>Na entrada de hoje, Diogo Braga pega sozinho o Michel Telo.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75512/0/Entrada_150_Maquina_nao_me_pega.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 149: AFFONSO, ACAIO E ADELE</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/149.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Caio Corraini se juntam a Adele para cantar essa entrada horrível.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75517/0/Entrada_149_Affonso_Acaio_e_Adele.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 148: C.R.E.U.Z.A. ME LIGA MAIS TARDE TEM BALADA</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/148.png</imagem>
-		<descricao>Na entrada de hoje, um ouvinte se junta a Gusttavo Lima para levar a C.R.E.U.Z.A. para a balada.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75544/0/Entrada_148_CREUZA_Me_Liga_Mais_Tarde_Tem_Balada.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 147: TESOURAS AFINADAS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/147.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam a0 Scissor Sister para afinarem suas tesouras</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75548/0/Entrada_147_Tesouras_Afinadas.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 146: ROBÔ DE ESPADAS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/146.png</imagem>
-		<descricao>Na entrada de hoje,  o ouvinte Leandro Antônio se junta ao Mötorhead para…</descricao>
-		<link>Na entrada de hoje,  o ouvinte Leandro Antônio se junta ao Mötorhead para…</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 145: NOITE PASSADA O FALCÃO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/145.png</imagem>
-		<descricao>Na entrada de hoje,  Affonso Solano, Diogo Braga e Roberto Estrada se juntam ao The Strokes para dar um pau no robô</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75556/0/Entrada_145_Noite_passada_o_Falcao.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 144: PALMAS PARA O ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/144.png</imagem>
-		<descricao>Na entrada de hoje,  Affonso Solano, Diogo Braga e Roberto Estrada se juntam a Deniece Williams para bater palmas para o robô.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75924/0/Entrada_144_Palmas_para_o_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 143: COTIDIANO ROBÓTICO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/143.png/imagem>
-		<descricao>Na entrada de hoje,  Affonso Solano, Diogo Braga e Roberto Estrada se juntam ao Chico Buarque para cortar o MRG</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/75937/0/Entrada_143_Cotidiano_Robotico.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 142: FUI MATAR ROBÔS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/142.png</imagem>
-		<descricao>Na entrada de hoje, Diogo Braga e Roberto Estrada se perdem nos olhos da Debbie Gibson</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76124/0/Entrada_142_Fui_Matar_Robos.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 141: SUPER IZZY BROTHERS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1411.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Izzynobre juntam ao encanador mais famoso dos video games</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76477/0/Entrada_141_Super_Izzy_Brothers.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 140: CASA DO VINHO ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/140.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga bebem um vinho com a Amy Winehouse</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76484/0/Entrada_140_Casa_do_Vinho_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 139: NERDCATS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/139.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada, Diogo Braga e Jovem Nerd se juntam ao Lion-O para enxergar além do alcance.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76487/0/Entrada_139_NerdCats.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 138: ROBÔ OF GLORY</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/138.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam ao Bon Jovi numa labareda de glória.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76495/0/Entrada_138_Robo_of_Glory.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 137: ORAÇÃO DO ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/137.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a Banda Mais Bonita da Cidade para fazer a Oração do Robô</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76498/0/Entrada_137_Oracao_do_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 136: O BARDO CEGO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/136.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam ao Blind Guardian numa canção medieval</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76501/0/Entrada_136_O_Bardo_Cego.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 135: BETO EYED PEAS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/135.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga procuram o amor com o Black Eyed Peas</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76504/0/Entrada_135_Beto_Eyed_Peas.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 134: SUPER ROBÓTICO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/134.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a super robótica turminha do Balão Mágico.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76507/0/Entrada_134_Super_Robotico.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 133: JUSTIN E BETO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/133.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga gemem com Justin Bieber</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76515/0/Entrada_133_Justin_e_Beto.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 132: MAIS QUE SENTIMENTO ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/132.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam a banda Boston para destruir a cidade.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76519/0/Entrada_132_Mais_que_sentimento_robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 131: VOU MATAR ROBÔS GIGANTES</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/131.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a banda Boston para destruir a cidade</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76522/0/Entrada_131_Vou_matar_Robo_gigante.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 130: CHEIRO DE ROBÔ TEEN</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/130.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano e Beto Estrada se juntam ao Nirvana para passar desodorante</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76554/0/Entrada_130_Cheiro_de_robo_teen.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 129: ÉPICO ROBÔ NO SAX</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/129.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga tocam Sax com o Sun Stroke Project</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76563/0/Entrada_129_Epico_robo_no_sax.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 128: ROBOZINHOS CARINHOSOS</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/128.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga chegam voando com os Ursinhos Carinhosos</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76560/0/Entrada_128_Robozinhos_Carinhosos.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 125: LÁ VEM O ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1251.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a Simone para uma cantiga de natal!</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76823/0/Entrada_125_La_vem_o_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 124: ROBÔ E SUA ARMA PELADA!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/124.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga correm da polícia com o Leslie Nielsen</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76846/0/Entrada_124_Robo_e_sua_arma_pelada.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 123: PODCAST ME FAZ SONHAR</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/123.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga sonham com as The Chordettes</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/76950/0/Entrada_123_Podcast_me_faz_sonhar.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 122: ROBÔ CIGANO</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/122.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga chacoalham com os Gipsy Kings</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/77037/0/Entrada_122_Robo_Cigano.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 121: FOLIA DO ROBÔ</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/121.png</imagem>
-		<descricao>Na entrada de hoje, Diogo Braga e Affonso Solano caem na folia robótica com a Xuxa.</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/77044/0/Entrada_121_Folia_do_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 120: QUE BONITO ROBÔ!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/120.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano se junta ao maravilhoso mundo de Louis Armstrong</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/77047/0/Entrada_120_Que_Bonito_Robo.mp3</link>
-	</vinheta>
-	<vinheta>
-		<titulo>ENTRADA MUSICAL 119: AFFONSO WONDER!</titulo>
-		<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/119.png</imagem>
-		<descricao>Na entrada de hoje, Affonso Solano ligou para dizer que ama o Stevie Wonder</descricao>
-		<link>http://jovemnerd.com.br/podpress_trac/web/77047/0/Entrada_120_Que_Bonito_Robo.mp3</link>
-	</vinheta>
-</vinhetas>
-<?xml version="1.0"?>
+			<titulo>ENTRADA MUSICAL 158: OZZY PERDEU O FONE</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/158.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano,  Diogo Braga e Roberto Estrada se juntam a Ozzy para lamentar pelo fone perdido..</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75375/0/Entrada_158_Ozzy_Perdeu_o_fone.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 157: O PODER DO CORAÇÃO METÁLICO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/157.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano,  Diogo Braga e Roberto Estrada se juntam a Huey Lewis para falar do poder do amor.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75382/0/Entrada_157_O_Poder_do_Coracao_Metalico.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 156: ELVIS FOGE DO ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1561.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Akira Sanoki se junta a Brenda Lee</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75387/0/Entrada_156_Elvis_foge_do_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 155: DJAVAN ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/155.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam a Djavan para procurar  o Sardi.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75392/0/Entrada_155_Djavan_RoBo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 154: MRG PRA ENTRETER</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/154.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Diogo Lunga compôs uma música Oooh, pra entreter!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75500/0/Entrada_154_Mrg_pra_Entreter.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 153: CONTAGEM REGRESSIVA</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/153.png</imagem>
+			<descricao>Na entrada de hoje, o ouvinte Benhur, da banda Hibria, se juntam a Europe na contagem final.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75503/0/Entrada_153_Contagem_regressiva.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 152: DOVAHKIIN E O ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/152.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam ao Dovahkiin para ouvir o MRG!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75506/0/Entrada_152_Dovahkiin_e_o_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 151: DESCONTROLANDO, DERRUBO TUDO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/151.png</imagem>
+			<descricao>Na entrada de hoje, os ouvintes Jóh e Lili ,do DescontrolePod, se juntam Erasure e perdem o controle do amor.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75509/0/Entrada_151_Descontrolado_derrubo_tudo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 150: MÁQUINA NÃO ME PEGA</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/150.png</imagem>
+			<descricao>Na entrada de hoje, Diogo Braga pega sozinho o Michel Telo.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75512/0/Entrada_150_Maquina_nao_me_pega.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 149: AFFONSO, ACAIO E ADELE</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/149.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Caio Corraini se juntam a Adele para cantar essa entrada horrível.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75517/0/Entrada_149_Affonso_Acaio_e_Adele.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 148: C.R.E.U.Z.A. ME LIGA MAIS TARDE TEM BALADA</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/148.png</imagem>
+			<descricao>Na entrada de hoje, um ouvinte se junta a Gusttavo Lima para levar a C.R.E.U.Z.A. para a balada.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75544/0/Entrada_148_CREUZA_Me_Liga_Mais_Tarde_Tem_Balada.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 147: TESOURAS AFINADAS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/147.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam a0 Scissor Sister para afinarem suas tesouras</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75548/0/Entrada_147_Tesouras_Afinadas.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 146: ROBÔ DE ESPADAS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/146.png</imagem>
+			<descricao>Na entrada de hoje,  o ouvinte Leandro Antônio se junta ao Mötorhead para…</descricao>
+			<link>Na entrada de hoje,  o ouvinte Leandro Antônio se junta ao Mötorhead para…</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 145: NOITE PASSADA O FALCÃO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/145.png</imagem>
+			<descricao>Na entrada de hoje,  Affonso Solano, Diogo Braga e Roberto Estrada se juntam ao The Strokes para dar um pau no robô</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75556/0/Entrada_145_Noite_passada_o_Falcao.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 144: PALMAS PARA O ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/144.png</imagem>
+			<descricao>Na entrada de hoje,  Affonso Solano, Diogo Braga e Roberto Estrada se juntam a Deniece Williams para bater palmas para o robô.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75924/0/Entrada_144_Palmas_para_o_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 143: COTIDIANO ROBÓTICO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/143.png</imagem>
+			<descricao>Na entrada de hoje,  Affonso Solano, Diogo Braga e Roberto Estrada se juntam ao Chico Buarque para cortar o MRG</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/75937/0/Entrada_143_Cotidiano_Robotico.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 142: FUI MATAR ROBÔS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/142.png</imagem>
+			<descricao>Na entrada de hoje, Diogo Braga e Roberto Estrada se perdem nos olhos da Debbie Gibson</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76124/0/Entrada_142_Fui_Matar_Robos.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 141: SUPER IZZY BROTHERS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1411.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Diogo Braga e Izzynobre juntam ao encanador mais famoso dos video games</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76477/0/Entrada_141_Super_Izzy_Brothers.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 140: CASA DO VINHO ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/140.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga bebem um vinho com a Amy Winehouse</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76484/0/Entrada_140_Casa_do_Vinho_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 139: NERDCATS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/139.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada, Diogo Braga e Jovem Nerd se juntam ao Lion-O para enxergar além do alcance.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76487/0/Entrada_139_NerdCats.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 138: ROBÔ OF GLORY</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/138.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam ao Bon Jovi numa labareda de glória.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76495/0/Entrada_138_Robo_of_Glory.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 137: ORAÇÃO DO ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/137.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a Banda Mais Bonita da Cidade para fazer a Oração do Robô</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76498/0/Entrada_137_Oracao_do_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 136: O BARDO CEGO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/136.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam ao Blind Guardian numa canção medieval</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76501/0/Entrada_136_O_Bardo_Cego.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 135: BETO EYED PEAS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/135.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga procuram o amor com o Black Eyed Peas</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76504/0/Entrada_135_Beto_Eyed_Peas.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 134: SUPER ROBÓTICO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/134.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a super robótica turminha do Balão Mágico.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76507/0/Entrada_134_Super_Robotico.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 133: JUSTIN E BETO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/133.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga gemem com Justin Bieber</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76515/0/Entrada_133_Justin_e_Beto.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 132: MAIS QUE SENTIMENTO ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/132.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Diogo Braga se juntam a banda Boston para destruir a cidade.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76519/0/Entrada_132_Mais_que_sentimento_robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 131: VOU MATAR ROBÔS GIGANTES</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/131.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a banda Boston para destruir a cidade</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76522/0/Entrada_131_Vou_matar_Robo_gigante.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 130: CHEIRO DE ROBÔ TEEN</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/130.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano e Beto Estrada se juntam ao Nirvana para passar desodorante</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76554/0/Entrada_130_Cheiro_de_robo_teen.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 129: ÉPICO ROBÔ NO SAX</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/129.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga tocam Sax com o Sun Stroke Project</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76563/0/Entrada_129_Epico_robo_no_sax.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 128: ROBOZINHOS CARINHOSOS</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/128.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga chegam voando com os Ursinhos Carinhosos</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76560/0/Entrada_128_Robozinhos_Carinhosos.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 125: LÁ VEM O ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/1251.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga se juntam a Simone para uma cantiga de natal!</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76823/0/Entrada_125_La_vem_o_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 124: ROBÔ E SUA ARMA PELADA!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/124.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga correm da polícia com o Leslie Nielsen</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76846/0/Entrada_124_Robo_e_sua_arma_pelada.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 123: PODCAST ME FAZ SONHAR</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/123.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga sonham com as The Chordettes</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/76950/0/Entrada_123_Podcast_me_faz_sonhar.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 122: ROBÔ CIGANO</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/122.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano, Beto Estrada e Diogo Braga chacoalham com os Gipsy Kings</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/77037/0/Entrada_122_Robo_Cigano.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 121: FOLIA DO ROBÔ</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/121.png</imagem>
+			<descricao>Na entrada de hoje, Diogo Braga e Affonso Solano caem na folia robótica com a Xuxa.</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/77044/0/Entrada_121_Folia_do_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 120: QUE BONITO ROBÔ!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/120.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano se junta ao maravilhoso mundo de Louis Armstrong</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/77047/0/Entrada_120_Que_Bonito_Robo.mp3</link>
+		</vinheta>
+		<vinheta>
+			<titulo>ENTRADA MUSICAL 119: AFFONSO WONDER!</titulo>
+			<imagem>http://crimsontyphoon.jovemnerd.com.br/wp-content/uploads/119.png</imagem>
+			<descricao>Na entrada de hoje, Affonso Solano ligou para dizer que ama o Stevie Wonder</descricao>
+			<link>http://jovemnerd.com.br/podpress_trac/web/77047/0/Entrada_120_Que_Bonito_Robo.mp3</link>
+		</vinheta>
+	</vinhetas>
+</entradas>
 
