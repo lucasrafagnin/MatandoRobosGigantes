@@ -35,7 +35,7 @@ public class AdapterGridVinhetas extends ArrayAdapter<Vinheta> {
 
 		Vinheta vinheta = vinhetas.get(position);
 		ImageView icone = (ImageView)row.findViewById(R.id.vinheta_img);
-		Picasso.with(context).load(vinheta.getImagem()).into(icone);
+		Picasso.with(context).load(vinheta.getImagem()).placeholder(R.drawable.loading).into(icone);
 
 		return row;
 	}

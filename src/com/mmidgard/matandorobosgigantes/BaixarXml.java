@@ -42,47 +42,52 @@ public class BaixarXml extends AsyncTask<Void, Void, String> {
 
 	@Override
 	protected String doInBackground(Void... params) {
-		SincronizarDados s = new SincronizarDados();
-		Document doc;
-		String xml;
+		if (Wifi.testConnection(c)) {
+			SincronizarDados s = new SincronizarDados();
+			Document doc;
+			String xml;
 
-		xml = s.getXmlFromUrl("http://104.131.206.85/MatandoRobosGigantes/vinhetas.xml");
+			xml = s.getXmlFromUrl("http://104.131.206.85/MatandoRobosGigantes/vinhetas.xml");
 
-		doc = s.getDomElement(xml);
-		NodeList vinhetas = doc.getElementsByTagName("vinhetas");
-		Element e = (Element)vinhetas.item(0);
+			doc = s.getDomElement(xml);
+			NodeList vinhetas = doc.getElementsByTagName("vinhetas");
+			Element e = (Element)vinhetas.item(0);
 
-		int versao = Integer.parseInt(s.getValue(e, "versao"));
+			int versao = Integer.parseInt(s.getValue(e, "versao"));
 
-		if (deveAtualizar(versao)) {
-			savePreferences(versao);
-			NodeList vinheta = doc.getElementsByTagName("vinheta");
-			mprogressDialog.setMax(vinheta.getLength());
+			if (deveAtualizar(versao)) {
+				savePreferences(versao);
+				NodeList vinheta = doc.getElementsByTagName("vinheta");
+				mprogressDialog.setMax(vinheta.getLength());
 
-			Vinheta v;
-			VinhetaDAO vDao = new VinhetaDAO(c);
+				Vinheta v;
+				VinhetaDAO vDao = new VinhetaDAO(c);
 
-			for (int j = 0; j < vinheta.getLength(); j++) {
-				v = new Vinheta();
-				Element item = (Element)vinheta.item(j);
-				String titulo = s.getValue(item, "titulo");
-				if (vDao.getValor(titulo, "titulo") == null) {
-					String imagem = s.getValue(item, "imagem");
-					String descricao = s.getValue(item, "descricao");
-					String link = s.getValue(item, "link");
+				int total = 0;
+				for (int j = 0; j < vinheta.getLength(); j++) {
+					v = new Vinheta();
+					Element item = (Element)vinheta.item(j);
+					String titulo = s.getValue(item, "titulo");
+					if (vDao.getValor(titulo, "titulo") == null) {
+						String imagem = s.getValue(item, "imagem");
+						String descricao = s.getValue(item, "descricao");
+						String link = s.getValue(item, "link");
 
-					v.setTitulo(titulo);
-					v.setImagem(imagem);
-					v.setDescricao(descricao);
-					v.setLink(link);
-					vDao.insert(v);
+						v.setTitulo(titulo);
+						v.setImagem(imagem);
+						v.setDescricao(descricao);
+						v.setLink(link);
+						vDao.insert(v);
+						total++;
+					}
+					mprogressDialog.incrementProgressBy(1);
 				}
-				mprogressDialog.incrementProgressBy(1);
+				return "Baixado " + total + " vinheta(s)";
+			} else {
+				return "Vinhetas ja estão atualizadas";
 			}
-			return "Vinhetas atualizada com sucesso";
-		} else {
-			return "Vinhetas ja estão atualizadas";
-		}
+		} else
+			return "Conecte-se à internet para baixar o Feed";
 	}
 
 	private boolean deveAtualizar(int versao) {

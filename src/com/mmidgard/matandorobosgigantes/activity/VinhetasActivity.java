@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.mmidgard.matandorobosgigantes.AdapterGridVinhetas;
 import com.mmidgard.matandorobosgigantes.BaixarXml;
 import com.mmidgard.matandorobosgigantes.R;
+import com.mmidgard.matandorobosgigantes.Wifi;
 import com.mmidgard.matandorobosgigantes.dao.VinhetaDAO;
 import com.mmidgard.matandorobosgigantes.entity.Vinheta;
 
@@ -124,7 +125,7 @@ public class VinhetasActivity extends Activity {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, final int arg2, long arg3) {
-				new AsyncTask<Void, Void, Void>() {
+				new AsyncTask<Void, Void, String>() {
 
 					@Override
 					protected void onPreExecute() {
@@ -142,24 +143,31 @@ public class VinhetasActivity extends Activity {
 					}
 
 					@Override
-					protected Void doInBackground(Void... params) {
-						vinheta = adapterVinhetas.getItem(arg2);
+					protected String doInBackground(Void... params) {
+						if (Wifi.testConnection(VinhetasActivity.this)) {
+							vinheta = adapterVinhetas.getItem(arg2);
 
-						mediaPlayer.stop();
-						mediaPlayer.release();
-						mediaPlayer = null;
+							mediaPlayer.stop();
+							mediaPlayer.release();
+							mediaPlayer = null;
 
-						mediaPlayer = new MediaPlayer();
-						mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+							mediaPlayer = new MediaPlayer();
+							mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-						streaming(vinheta.getLink());
-						mediaPlayer.start();
-						return null;
+							streaming(vinheta.getLink());
+							mediaPlayer.start();
+						} else {
+							return "Conecte-se à internet para ouvir a vinheta";
+						}
+						return "";
 					}
 
 					@Override
-					protected void onPostExecute(Void result) {
+					protected void onPostExecute(String result) {
 						super.onPostExecute(result);
+						if (!result.equals(""))
+							Toast.makeText(VinhetasActivity.this, result, Toast.LENGTH_SHORT).show();
+
 						barra.setMax(mediaPlayer.getDuration());
 						seekUpdation();
 						dialog.dismiss();
@@ -186,8 +194,16 @@ public class VinhetasActivity extends Activity {
 				seekHandler.postDelayed(run, 1000);
 			}
 		} catch (Exception e) {
-			Toast.makeText(VinhetasActivity.this, "Ops...Ocorreu um erro\nTente novamente.", Toast.LENGTH_SHORT).show();
+			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		mediaPlayer.stop();
+		mediaPlayer.release();
+		mediaPlayer = null;
 	}
 
 }

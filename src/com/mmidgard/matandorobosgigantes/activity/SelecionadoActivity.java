@@ -119,10 +119,14 @@ public class SelecionadoActivity extends Activity {
 	};
 
 	public void seekUpdation() {
-		if (mediaPlayer != null) {
-			progresso.setProgress(mediaPlayer.getCurrentPosition());
-			duracaoAtual.setText(getTimeString(mediaPlayer.getCurrentPosition()));
-			seekHandler.postDelayed(run, 1000);
+		try {
+			if (mediaPlayer != null) {
+				progresso.setProgress(mediaPlayer.getCurrentPosition());
+				duracaoAtual.setText(getTimeString(mediaPlayer.getCurrentPosition()));
+				seekHandler.postDelayed(run, 1000);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
