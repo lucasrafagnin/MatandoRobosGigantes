@@ -14,7 +14,7 @@ import com.mmidgard.matandorobosgigantes.entity.Vinheta;
 public class BDControle<E> extends OrmLiteSqliteOpenHelper {
 
 	private static final String NOME_BD = "mrg.db";
-	private static int VERSAO_BD = 1;
+	private static int VERSAO_BD = 2;
 
 	public BDControle(Context context) {
 		super(context, NOME_BD, null, VERSAO_BD);

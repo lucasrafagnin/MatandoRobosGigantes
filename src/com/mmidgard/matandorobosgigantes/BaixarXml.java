@@ -7,6 +7,7 @@ import org.w3c.dom.NodeList;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.dao.VinhetaDAO;
 import com.mmidgard.matandorobosgigantes.entity.Vinheta;
@@ -33,6 +34,7 @@ public class BaixarXml extends AsyncTask<Void, Void, String> {
 	@Override
 	protected void onPostExecute(String result) {
 		mprogressDialog.dismiss();
+		Toast.makeText(c, result, Toast.LENGTH_LONG).show();
 	}
 
 	@Override
@@ -44,26 +46,26 @@ public class BaixarXml extends AsyncTask<Void, Void, String> {
 		xml = s.getXmlFromUrl("http://104.131.206.85/MatandoRobosGigantes/vinhetas.xml");
 
 		doc = s.getDomElement(xml);
-		NodeList nl1 = doc.getElementsByTagName("entradas");
-		Element e = (Element)nl1.item(0);
+		NodeList vinhetas = doc.getElementsByTagName("vinhetas");
+		Element e = (Element)vinhetas.item(0);
 
 		String versao = s.getValue(e, "versao");
 
 		if (deveAtualizar(versao)) {
-			NodeList vinhetas = e.getElementsByTagName("vinhetas");
-			mprogressDialog.setMax(vinhetas.getLength());
+			NodeList vinheta = doc.getElementsByTagName("vinheta");
+			mprogressDialog.setMax(vinheta.getLength());
 
 			Vinheta v;
 			VinhetaDAO vDao = new VinhetaDAO(c);
 
-			for (int j = 0; j < vinhetas.getLength(); j++) {
+			for (int j = 0; j < vinheta.getLength(); j++) {
 				v = new Vinheta();
-				Element vinheta = (Element)vinhetas.item(j);
-				String titulo = s.getValue(vinheta, "titulo");
-				String imagem = s.getValue(vinheta, "imagem");
-				String descricao = s.getValue(vinheta, "descricao");
-				String link = s.getValue(vinheta, "link");
-				
+				Element item = (Element)vinheta.item(j);
+				String titulo = s.getValue(item, "titulo");
+				String imagem = s.getValue(item, "imagem");
+				String descricao = s.getValue(item, "descricao");
+				String link = s.getValue(item, "link");
+
 				v.setTitulo(titulo);
 				v.setImagem(imagem);
 				v.setDescricao(descricao);

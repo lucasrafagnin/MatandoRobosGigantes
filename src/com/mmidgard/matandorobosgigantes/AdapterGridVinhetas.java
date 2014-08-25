@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
 import com.mmidgard.matandorobosgigantes.entity.Vinheta;
+import com.squareup.picasso.Picasso;
 
 public class AdapterGridVinhetas extends ArrayAdapter<Vinheta> {
 
@@ -32,11 +33,9 @@ public class AdapterGridVinhetas extends ArrayAdapter<Vinheta> {
 		LayoutInflater inflater = ((Activity)context).getLayoutInflater();
 		row = inflater.inflate(layoutResourceId, parent, false);
 
-//		Vinheta vinheta = vinhetas.get(position);
-
+		Vinheta vinheta = vinhetas.get(position);
 		ImageView icone = (ImageView)row.findViewById(R.id.vinheta_img);
-
-		icone.setImageResource(R.drawable.item);
+		Picasso.with(context).load(vinheta.getImagem()).into(icone);
 
 		return row;
 	}

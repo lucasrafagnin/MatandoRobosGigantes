@@ -7,10 +7,60 @@
     <GridView
         android:id="@+id/vinhetas_grid"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_margin="5dp"
+        android:layout_weight="1"
         android:gravity="center"
         android:numColumns="4"
         android:scrollingCache="true" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/player"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:padding="5dp"
+            android:src="@drawable/play_vinheta" />
+        
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:padding="5dp"
+            android:src="@drawable/pause_vinheta" />
+
+        <SeekBar
+            android:id="@+id/barraProgresso"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:thumb="@drawable/seek_handler" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/baixarpod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#A32D3D"
+        android:text="Baixar o Feed de vinhetas"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
 </LinearLayout>
