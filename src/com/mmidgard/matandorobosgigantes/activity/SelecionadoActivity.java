@@ -47,9 +47,10 @@ public class SelecionadoActivity extends Activity {
 	private EpisodioDAO epDao;
 	private boolean offline = false;
 	private boolean doubleClick = false;
-
+	private boolean preparado = false;
 	private Handler seekHandler = new Handler();
 	private ProgressDialog dialog;
+	private ProgressDialog dialog2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class SelecionadoActivity extends Activity {
 		offline = b.getBoolean("offline");
 
 		dialog = new ProgressDialog(this);
+		dialog2 = new ProgressDialog(this);
 
 		setarInformacoes();
 	}
@@ -101,14 +103,16 @@ public class SelecionadoActivity extends Activity {
 		epDao = new EpisodioDAO(SelecionadoActivity.this);
 
 		clicks();
+	}
 
+	private void prepararPlayer() {
 		if (!offline)
 			streaming(episodio.getLink());
 		else
 			playLocal();
 		progresso.setMax(mediaPlayer.getDuration());
 
-		seekUpdation();
+		preparado = true;
 	}
 
 	Runnable run = new Runnable() {
@@ -147,13 +151,48 @@ public class SelecionadoActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				try {
+				if (!preparado) {
+					new AsyncTask<Void, Void, String>() {
+
+						@Override
+						protected void onPreExecute() {
+							super.onPreExecute();
+							if (!episodio.isBaixado()) {
+								dialog.setIndeterminate(true);
+								dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+								dialog.setCancelable(false);
+								dialog.setTitle("Aguarde...");
+								dialog.setMessage("Fazendo o streaming do episódio");
+								dialog.show();
+							}
+							play.setVisibility(View.GONE);
+							pause.setVisibility(View.VISIBLE);
+						}
+
+						@Override
+						protected String doInBackground(Void... params) {
+							try {
+								prepararPlayer();
+								mediaPlayer.start();
+							} catch (Exception e) {
+								e.printStackTrace();
+								return "Conecte-se à internet para ouvir o episódio";
+							}
+							return "";
+						}
+
+						protected void onPostExecute(String result) {
+							if (!result.equals(""))
+								Toast.makeText(SelecionadoActivity.this, result, Toast.LENGTH_SHORT).show();
+							if (!episodio.isBaixado())
+								dialog.dismiss();
+							seekUpdation();
+						};
+					}.execute();
+				} else {
 					mediaPlayer.start();
 					play.setVisibility(View.GONE);
 					pause.setVisibility(View.VISIBLE);
-				} catch (Exception e) {
-					e.printStackTrace();
-					Toast.makeText(SelecionadoActivity.this, "Conecte-se à internet para ouvir o episódio", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
@@ -251,12 +290,12 @@ public class SelecionadoActivity extends Activity {
 
 			@Override
 			protected void onPreExecute() {
-				dialog.setIndeterminate(false);
-				dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-				dialog.setCancelable(false);
-				dialog.setTitle("Aguarde...");
-				dialog.setMessage("Baixando o episódio");
-				dialog.show();
+				dialog2.setIndeterminate(false);
+				dialog2.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+				dialog2.setCancelable(false);
+				dialog2.setTitle("Aguarde...");
+				dialog2.setMessage("Baixando o episódio");
+				dialog2.show();
 			}
 
 			@Override
@@ -299,11 +338,11 @@ public class SelecionadoActivity extends Activity {
 			}
 
 			protected void onProgressUpdate(Integer... progress) {
-				dialog.setProgress(progress[0]);
+				dialog2.setProgress(progress[0]);
 			}
 
 			protected void onPostExecute(Boolean result) {
-				dialog.dismiss();
+				dialog2.dismiss();
 				if (result) {
 					Toast.makeText(SelecionadoActivity.this, "Episódio baixado com sucesso!", Toast.LENGTH_LONG).show();
 					episodio.setBaixado(true);

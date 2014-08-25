@@ -103,7 +103,7 @@ public class PodcastActivity extends Activity implements OnItemClickListener {
 						onProgressUpdate(valor);
 					}
 					if (total == 0)
-						return "";
+						return "Episódios ja estão atualizados";
 					else
 						return "Baixado " + total + " episódio(s)";
 				} else
