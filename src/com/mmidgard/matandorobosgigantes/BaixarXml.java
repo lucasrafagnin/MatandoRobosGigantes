@@ -6,7 +6,10 @@ import org.w3c.dom.NodeList;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.dao.VinhetaDAO;
@@ -34,7 +37,7 @@ public class BaixarXml extends AsyncTask<Void, Void, String> {
 	@Override
 	protected void onPostExecute(String result) {
 		mprogressDialog.dismiss();
-		Toast.makeText(c, result, Toast.LENGTH_LONG).show();
+		Toast.makeText(c, result, Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
@@ -49,9 +52,10 @@ public class BaixarXml extends AsyncTask<Void, Void, String> {
 		NodeList vinhetas = doc.getElementsByTagName("vinhetas");
 		Element e = (Element)vinhetas.item(0);
 
-		String versao = s.getValue(e, "versao");
+		int versao = Integer.parseInt(s.getValue(e, "versao"));
 
 		if (deveAtualizar(versao)) {
+			savePreferences(versao);
 			NodeList vinheta = doc.getElementsByTagName("vinheta");
 			mprogressDialog.setMax(vinheta.getLength());
 
@@ -62,16 +66,17 @@ public class BaixarXml extends AsyncTask<Void, Void, String> {
 				v = new Vinheta();
 				Element item = (Element)vinheta.item(j);
 				String titulo = s.getValue(item, "titulo");
-				String imagem = s.getValue(item, "imagem");
-				String descricao = s.getValue(item, "descricao");
-				String link = s.getValue(item, "link");
+				if (vDao.getValor(titulo, "titulo") == null) {
+					String imagem = s.getValue(item, "imagem");
+					String descricao = s.getValue(item, "descricao");
+					String link = s.getValue(item, "link");
 
-				v.setTitulo(titulo);
-				v.setImagem(imagem);
-				v.setDescricao(descricao);
-				v.setLink(link);
-				vDao.insert(v);
-
+					v.setTitulo(titulo);
+					v.setImagem(imagem);
+					v.setDescricao(descricao);
+					v.setLink(link);
+					vDao.insert(v);
+				}
 				mprogressDialog.incrementProgressBy(1);
 			}
 			return "Vinhetas atualizada com sucesso";
@@ -80,7 +85,20 @@ public class BaixarXml extends AsyncTask<Void, Void, String> {
 		}
 	}
 
-	private boolean deveAtualizar(String update) {
-		return true;
+	private boolean deveAtualizar(int versao) {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(c);
+		int versaoAtual = sharedPreferences.getInt("versao", 0);
+		if (versao > versaoAtual)
+			return true;
+		else
+			return false;
 	}
+
+	private void savePreferences(int versao) {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(c);
+		Editor editor = sharedPreferences.edit();
+		editor.putInt("versao", versao);
+		editor.commit();
+	}
+
 }

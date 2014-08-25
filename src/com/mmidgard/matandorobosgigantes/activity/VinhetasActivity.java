@@ -21,6 +21,7 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 import com.mmidgard.matandorobosgigantes.AdapterGridVinhetas;
 import com.mmidgard.matandorobosgigantes.BaixarXml;
@@ -145,6 +146,7 @@ public class VinhetasActivity extends Activity {
 						vinheta = adapterVinhetas.getItem(arg2);
 
 						mediaPlayer.stop();
+						mediaPlayer.release();
 						mediaPlayer = null;
 
 						mediaPlayer = new MediaPlayer();
@@ -178,9 +180,13 @@ public class VinhetasActivity extends Activity {
 	};
 
 	public void seekUpdation() {
-		if (mediaPlayer != null) {
-			barra.setProgress(mediaPlayer.getCurrentPosition());
-			seekHandler.postDelayed(run, 1000);
+		try {
+			if (mediaPlayer != null) {
+				barra.setProgress(mediaPlayer.getCurrentPosition());
+				seekHandler.postDelayed(run, 1000);
+			}
+		} catch (Exception e) {
+			Toast.makeText(VinhetasActivity.this, "Ops...Ocorreu um erro\nTente novamente.", Toast.LENGTH_SHORT).show();
 		}
 	}
 
